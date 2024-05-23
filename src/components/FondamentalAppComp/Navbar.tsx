@@ -28,8 +28,8 @@ const NavBar = () => {
     function title() {
         return (
             <Link className="flex items-center justify-center pl-[15%] max-md:pl-3 group" href="/">
-                <img src={"/Img/profilPic.webp"} className="h-12 border-2 border-solid border-primary rounded-full mr-2 group-hover:border-secondary" alt="Logo" />
-                <h2 className="mt-1 font-semiBold text-2xl text-primary group-hover:text-secondary">Seguin-dev</h2>
+                <img src={"/Img/profilPic.webp"} className="h-12 max-md:h-10 border-2 border-solid border-primary rounded-full mr-2 group-hover:border-secondary" alt="Logo" />
+                <h2 className="mt-1 font-semiBold text-2xl max-md:text-[22px] text-primary group-hover:text-secondary">Seguin-dev</h2>
             </Link>
         );
     }
@@ -47,9 +47,9 @@ const NavBar = () => {
         return (
             <div className='flex items-center justify-center pr-[15%] max-md:pr-3'>
                 {linkTemplate("Projets", '/projects')}
-                <div className='w-6'/>
-                {linkTemplate("À Propos", '/about')}
-                <div className='w-6' />
+                <div className='w-6 max-md:w-2'/>
+                {linkTemplate(" Propos", '/about')}
+                <div className='w-6 max-md:w-4' />
             </div>
         );
     }
