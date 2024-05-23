@@ -57,7 +57,7 @@ const NavBar = () => {
     /////////////////////////////////////////////////////////////////
     // code principale
     return (
-        <div className={`w-screen h-16 fixed top-0 flex items-center justify-between backdrop-blur-xl z-10 transition-all duration-200 ease-in-out ${scrolled ? 'border-b border-solid border-gray-800' : ''}`}>
+        <div className={`w-screen h-16 fixed top-0 flex items-center justify-between backdrop-blur-xl z-10 transition-all duration-200 ease-in-out ${scrolled ? 'border-b border-solid border-gray-800' : 'border-b border-solid border-background'}`}>
             {title()}
             {links()}
         </div>
