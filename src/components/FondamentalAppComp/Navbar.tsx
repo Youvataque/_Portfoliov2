@@ -6,21 +6,21 @@ import Link from 'next/link';
 const NavBar = () => {
     const [scrolled, setScrolled] = useState(false);
 
+    /////////////////////////////////////////////////////////////////
+    // control du scroll
     useEffect(() => {
-        if (typeof window !== 'undefined') {
-            const handleScroll = () => {
-                if (window.scrollY > 40) {
-                    setScrolled(true);
-                } else {
-                    setScrolled(false);
-                }
-            };
+        const handleScroll = () => {
+            if (window.scrollY > 40) {
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+        };
 
-            window.addEventListener('scroll', handleScroll);
-            return () => {
-                window.removeEventListener('scroll', handleScroll);
-            };
-        }
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
     }, []);
 
     /////////////////////////////////////////////////////////////////
@@ -57,7 +57,7 @@ const NavBar = () => {
     /////////////////////////////////////////////////////////////////
     // code principale
     return (
-        <div className={`w-screen h-16 bg-opacity-50 fixed top-0 flex items-center justify-between backdrop-blur-md z-10  ${scrolled ? 'border-b-0.5 border-solid border-gray-800' : ''}`}>
+        <div className={`w-screen h-16 fixed top-0 flex items-center justify-between backdrop-blur-xl z-10 transition-all duration-200 ease-in-out ${scrolled ? 'border-b border-solid border-gray-800' : ''}`}>
             {title()}
             {links()}
         </div>
