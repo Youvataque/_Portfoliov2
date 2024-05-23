@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Garamond :700|Garamond :400');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: 'Lexend', sans-serif;
+}
