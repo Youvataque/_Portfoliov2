@@ -47,8 +47,8 @@ const NavBar = () => {
         return (
             <div className='flex items-center justify-center pr-[15%] max-md:pr-3'>
                 {linkTemplate("Projets", '/projects')}
-                <div className='w-6 max-md:w-2'/>
-                {linkTemplate(" Propos", '/about')}
+                <div className='w-6 max-md:w-3'/>
+                {linkTemplate("Infos", '/about')}
                 <div className='w-6 max-md:w-4' />
             </div>
         );

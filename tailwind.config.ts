@@ -18,6 +18,12 @@ const config = {
       },
     },
     extend: {
+      fontSize: {
+        'md' : '16px',
+        '3.5xl' : ['35px', "1.2"],
+        '4xl' : ['45px', "1.2"],
+        '8xl': ['80px', "1.2"],
+      },
       colors : {
         background: "#11131F",
         foreground: "#141726",
