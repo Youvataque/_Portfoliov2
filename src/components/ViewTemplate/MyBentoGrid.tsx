@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 
 export function MyBentoGrid() {
   return (
-    <BentoGrid className="w-[70vw] mx-auto md:auto-rows-[20rem]">
+    <BentoGrid className="w-[50vw] max-2xl:w-[70vw] max-md:w-[95vw] mx-auto md:auto-rows-[20rem]">
       {items.map((item, i) => (
         <BentoGridItem
           key={i}

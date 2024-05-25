@@ -9,8 +9,34 @@ import Linkedin from "@/Icon/Linkedin";
 import Github from "@/Icon/Github";
 import Facebook from "@/Icon/Facebook";
 import { MyBentoGrid } from "@/components/ViewTemplate/MyBentoGrid";
-
+import IconCloud from "@/components/magicui/icon-cloud";
+import { MyAnimatedList } from "@/components/ViewTemplate/MyAnimatedList";
 export default function Home() {
+
+  /////////////////////////////////////////////////////////////////
+  // icons des technologies utilisés pour le dev web & mobile
+  const cloudIconsData = {
+    iconSlugs: [
+      "typescript",
+      "javascript",
+      "dart",
+      "react",
+      "flutter",
+      "android",
+      "ios",
+      "pixelmator",
+      "html5",
+      "css3",
+      "firebase",
+      "vercel",
+      "git",
+      "github",
+      "visualstudiocode",
+      "figma",
+      "nextjs",
+      "tailwindcss",
+    ],
+   };
 
   /////////////////////////////////////////////////////////////////
   // text custom pour la description
@@ -39,7 +65,7 @@ export default function Home() {
       <DockIcon className="group">
         {iconButton(<Linkedin width="33px" height="33px" color="text-primary fill-current group-hover:text-secondary"/>, "https://www.linkedin.com/in/yannis-seguin-540432161/")}
       </DockIcon>
-      <DockIcon className="group">
+      <DockIcon className="group" size={20}>
         {iconButton(<Youtube width="31px" height="31px" color="text-primary fill-current group-hover:text-secondary"/>, "https://www.youtube.com/channel/UCQUgpvsakyzaLKko-a4lfBA")}
       </DockIcon>
       <DockIcon className="group">
@@ -54,7 +80,7 @@ export default function Home() {
   /////////////////////////////////////////////////////////////////
   // header du composant avec pp et infos
   function header(){
-    return <div className="flex flex-row justify-between items-center w-[70vw] max-md:w-[95vw]">
+    return <div className="flex flex-row justify-between items-center w-[50vw] max-2xl:w-[70vw] max-md:w-[95vw]">
       <div className="flex flex-col w-full items-start">
         <Text text="Bienvenue ! Je suis -" style="text-secondary" />
         <Title text="Yannis Seguin" style="text-secondary" />
@@ -68,16 +94,36 @@ export default function Home() {
   }
 
   /////////////////////////////////////////////////////////////////
+  // composant d'icon animé
+  function iconCloud() {
+    return (
+      <div className="relative w-[50vw] max-2xl:w-[70vw] max-md:w-[95vw] flex max-md:justify-center items-center bg-transparent">
+        <div className="w-96 max-2xl:w-80 max-md:w-64"><IconCloud iconSlugs={cloudIconsData.iconSlugs} /></div>
+      </div>
+    );
+  }
+
+  /////////////////////////////////////////////////////////////////
   // corp du code
   return (
     <BodyTemplate>
       <div className="flex flex-col items-center">
         {header()}
         <div className="md:hidden w-[95vw]">{textCustom()}</div>
-        <div className="pt-48"/>
+        <div className="pt-[20vw] max-2xl:pt-[16vw] max-md:pt-12"/>
+        <div className="w-[50vw] max-2xl:w-[70vw] max-md:w-[95vw] flex items-center justify-start pb-4">
+          <Text text="Mes derniers projets :" style="text-secondary" />
+        </div>
         <MyBentoGrid />
-        <div className="pt-48"/>
-
+        <div className="pt-[20vw] max-2xl:pt-[16vw] max-md:pt-12"/>
+        <div className="w-[50vw] max-2xl:w-[70vw] max-md:w-[95vw] flex items-center justify-start pb-4">
+          <Text text="Quelques informations :" style="text-secondary" />
+        </div>
+        <div className="flex flex-row max-md:flex-col-reverse justify-between max-md:justify-center items-center w-[50vw] max-2xl:w-[70vw] max-md:w-[95vw]">
+          {iconCloud()}
+          <MyAnimatedList/>
+        </div>
+        <div className="pt-[14vw] max-2xl:pt-[10vw] max-md:pt-12"/>
       </div>
     </BodyTemplate>
   );
