@@ -8,6 +8,8 @@ import {
 } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 
+/////////////////////////////////////////////////////////////////
+// corp du code
 export function MyBentoGrid() {
   return (
     <BentoGrid className="w-[50vw] max-2xl:w-[70vw] max-md:w-[95vw] mx-auto md:auto-rows-[20rem]">
@@ -26,10 +28,14 @@ export function MyBentoGrid() {
   );
 }
 
+/////////////////////////////////////////////////////////////////
+// pastille de type
 function pastille(text: string, color: string) {
     return <div className={cn("w-min h-7 text-sm px-3 overflow-hidden border border-solid flex items-center justify-center pb-[2px]", color, "rounded-xl")}>{text}</div>
 }
 
+/////////////////////////////////////////////////////////////////
+// data des items
 const items = [
   {
     title: "NewBat : l'informatique du bâtiment !",
@@ -53,7 +59,7 @@ const items = [
   },
   {
     title: "Montpellier Transport",
-    description: "Vous en avez assez d'utiliser une application mal conçue au quotidien ? Vous souhaitez profiter d'une ergonomie et d'un design adaptés aux gots actuels ? Choisissez Montpellier Transport !",
+    description: "Vous en avez assez d'utiliser une application mal conçue au quotidien ? Vous souhaitez profiter d'une ergonomie et d'un design adaptés aux gouts actuels ? Choisissez Montpellier Transport !",
     header: <div className="w-full flex items-center justify-center pt-4 max-md:pt-0">
         <img src="/Img/Mt.webp" alt="NewBat" className="h-28 max-md:h-20 rounded-2xl" />
     </div>,

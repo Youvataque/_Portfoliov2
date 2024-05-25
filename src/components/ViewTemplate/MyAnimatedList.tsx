@@ -11,6 +11,8 @@ interface Item {
   time: string;
 }
 
+/////////////////////////////////////////////////////////////////
+// data de la list animé
 let notifications = [
   {
     name: "Site vitrine",
@@ -45,11 +47,13 @@ let notifications = [
 
 notifications = Array.from({ length: 10 }, () => notifications).flat();
 
+/////////////////////////////////////////////////////////////////
+// template d'un élément de list
 const Notification = ({ name, description, icon, color, time }: Item) => {
   return (
     <figure
       className={cn(
-        "relative mx-auto min-h-fit w-full max-w-[400px] transform cursor-pointer overflow-hidden rounded-2xl p-4",
+        "relative mx-auto min-h-fit w-full px-4 transform cursor-pointer overflow-hidden rounded-2xl py-2",
         // animation styles
         "transition-all duration-200 ease-in-out hover:scale-[103%]",
         // dark styles
@@ -80,10 +84,14 @@ const Notification = ({ name, description, icon, color, time }: Item) => {
   );
 };
 
+/////////////////////////////////////////////////////////////////
+// corp du code
 export function MyAnimatedList() {
   return (
-    <div className="relative flex h-[290px] w-full max-w-[32rem] flex-col overflow-hidden border border-primary bg-foreground rounded-2xl shadow-lg">
-      <AnimatedList>
+    <div className="relative flex h-[270px] w-full max-w-[32rem] flex-col overflow-hidden border border-primary bg-foreground rounded-2xl shadow-lg">
+      <AnimatedList
+        delay={2700}
+      >
         {notifications.map((item, idx) => (
           <Notification {...item} key={idx} />
         ))}

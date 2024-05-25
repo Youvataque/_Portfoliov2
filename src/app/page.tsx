@@ -11,6 +11,7 @@ import Facebook from "@/Icon/Facebook";
 import { MyBentoGrid } from "@/components/ViewTemplate/MyBentoGrid";
 import IconCloud from "@/components/magicui/icon-cloud";
 import { MyAnimatedList } from "@/components/ViewTemplate/MyAnimatedList";
+import Footer from "@/components/FondamentalAppComp/Footer";
 export default function Home() {
 
   /////////////////////////////////////////////////////////////////
@@ -58,7 +59,7 @@ export default function Home() {
   /////////////////////////////////////////////////////////////////
   // zone des icones
   function docZone() {
-    return <Dock>
+    return <Dock className="max-md:hidden">
       <DockIcon className="group">
         {iconButton(<Github width="33px" height="33px" color="text-primary fill-current group-hover:text-secondary"/>, "https://github.com/Youvataque")}
       </DockIcon>
@@ -78,6 +79,18 @@ export default function Home() {
   }
 
   /////////////////////////////////////////////////////////////////
+  // version du docZone pour mobile
+  function mobileDocZone() {
+    return <div className="flex flex-row md:hidden gap-1 pt-1">
+      {iconButton(<Github width="33px" height="33px" color="text-primary fill-current group-hover:text-secondary"/>, "https://github.com/Youvataque")}
+      {iconButton(<Linkedin width="33px" height="33px" color="text-primary fill-current group-hover:text-secondary"/>, "https://www.linkedin.com/in/yannis-seguin-540432161/")}
+      {iconButton(<Youtube width="31px" height="31px" color="text-primary fill-current group-hover:text-secondary"/>, "https://www.youtube.com/channel/UCQUgpvsakyzaLKko-a4lfBA")}
+      {iconButton(<Twitter width="31px" height="31px" color="text-primary fill-current group-hover:text-secondary"/>, "https://x.com/SEGUIN_Yannis")}
+      {iconButton(<Facebook width="28px" height="28px" color="text-primary fill-current group-hover:text-secondary"/>, "https://www.facebook.com/youvataque?locale=fr_FR")}
+    </div>
+  }
+
+  /////////////////////////////////////////////////////////////////
   // header du composant avec pp et infos
   function header(){
     return <div className="flex flex-row justify-between items-center w-[50vw] max-2xl:w-[70vw] max-md:w-[95vw]">
@@ -85,6 +98,7 @@ export default function Home() {
         <Text text="Bienvenue ! Je suis -" style="text-secondary" />
         <Title text="Yannis Seguin" style="text-secondary" />
         {docZone()}
+        {mobileDocZone()}
         <div className="max-md:hidden">{textCustom()}</div>
       </div>
       <div className="flex flex-col w-full max-md:w-auto items-end">
@@ -110,20 +124,22 @@ export default function Home() {
       <div className="flex flex-col items-center">
         {header()}
         <div className="md:hidden w-[95vw]">{textCustom()}</div>
-        <div className="pt-[20vw] max-2xl:pt-[16vw] max-md:pt-12"/>
+        <div className="pt-[20vw] max-2xl:pt-[16vw] max-md:pt-32"/>
         <div className="w-[50vw] max-2xl:w-[70vw] max-md:w-[95vw] flex items-center justify-start pb-4">
           <Text text="Mes derniers projets :" style="text-secondary" />
         </div>
         <MyBentoGrid />
-        <div className="pt-[20vw] max-2xl:pt-[16vw] max-md:pt-12"/>
+        <div className="pt-[20vw] max-2xl:pt-[16vw] max-md:pt-32"/>
         <div className="w-[50vw] max-2xl:w-[70vw] max-md:w-[95vw] flex items-center justify-start pb-4">
-          <Text text="Quelques informations :" style="text-secondary" />
+          <Text text="Quelques informations :" style="text-secondary"/>
         </div>
         <div className="flex flex-row max-md:flex-col-reverse justify-between max-md:justify-center items-center w-[50vw] max-2xl:w-[70vw] max-md:w-[95vw]">
           {iconCloud()}
           <MyAnimatedList/>
         </div>
-        <div className="pt-[14vw] max-2xl:pt-[10vw] max-md:pt-12"/>
+        <div className="pt-[16vw] max-2xl:pt-[16vw] max-md:pt-12"/>
+        <Footer/>
+        <div className="pb-4"/>
       </div>
     </BodyTemplate>
   );
