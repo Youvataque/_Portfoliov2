@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      screens: {
+        '2xl': '2000px'
+      },
       fontSize: {
         'md' : '16px',
         '3.5xl' : ['35px', "1.2"],
@@ -34,9 +37,7 @@ const config = {
         accentColor : "#1d2e62",
       },
       borderRadius: {
-        lg: "var(--radius)",
-        md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
+        
       },
       keyframes: {
         "accordion-down": {
