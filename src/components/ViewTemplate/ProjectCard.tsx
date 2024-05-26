@@ -30,11 +30,11 @@ const ProjectCard:React.FC<ProjectCardProps> = ({title, description, href, tags,
           </div>
           <span className={cn("text-sm border w-min mt-1", typeColor)}>{type}</span>
           <div className="flex-grow"/>
-          <div className="flex flex-wrap w-full h-14 rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-violet-400 to-secondary">
-            {tags.map((tag, index) => (
-              <span key={index} className="text-primary">
-                {tag}
-              </span>
+          <div className="flex flex-wrap items-center w-full pb-2 h-min rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-violet-400 to-secondary px-1">
+            {tags.map((tag) => (
+                <div className="pl-1 pt-2">
+                    {tag}
+                </div>
             ))}
           </div>
         </div>

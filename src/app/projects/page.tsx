@@ -1,3 +1,14 @@
+import Github from "@/Icon/Github";
+import CssIco from "@/Icon/tech/CssIco";
+import Figma from "@/Icon/tech/Figma";
+import Firebase from "@/Icon/tech/Firebase";
+import Flutter from "@/Icon/tech/Flutter";
+import NextIco from "@/Icon/tech/NextIco";
+import Photoshop from "@/Icon/tech/Photoshop";
+import ReactIco from "@/Icon/tech/ReactIco";
+import Tailwind from "@/Icon/tech/Tailwind";
+import Typescript from "@/Icon/tech/Typescript";
+import Vite from "@/Icon/tech/Vite";
 import BodyTemplate from "@/components/FondamentalAppComp/BodyTemplate";
 import Footer from "@/components/FondamentalAppComp/Footer";
 import MainText from "@/components/ViewTemplate/MainText";
@@ -16,7 +27,12 @@ const Projects:React.FC = () => {
             href: "https://github.com/Youvataque/Coockleen-Flutter",
             type:  <p>Abandonné</p>,
             typeColor: "border-red-400 text-red-400 px-1 rounded-lg",
-            tags: [<span>React</span>, <span>React Native</span>, <span>Expo</span>]
+            tags: [
+                <Flutter width="27px" height="27px" color="text-primary fill-current"/>,
+                <Firebase width="30px" height="30px" color="text-primary fill-current"/>,
+                <Github width="30px" height="30px" color="text-primary fill-current"/>,
+                <Photoshop width="27px" height="27px" color="text-primary fill-current"/>
+            ]
         },
         {
             title: "Montpellier Transport",
@@ -24,7 +40,11 @@ const Projects:React.FC = () => {
             href: "https://notOnline.com",
             type: <p>Contribution</p>,
             typeColor: "border-yellow-400 text-yellow-400 px-1 rounded-lg",
-            tags: [<span>React</span>, <span>React Native</span>, <span>Expo</span>]
+            tags: [
+                <Flutter width="27px" height="27px" color="text-primary fill-current"/>,
+                <Firebase width="30px" height="30px" color="text-primary fill-current"/>,
+                <Github width="30px" height="30px" color="text-primary fill-current"/>
+            ]
         },
         {
             title: "NewBat : l'informatique du bâtiment",
@@ -32,7 +52,13 @@ const Projects:React.FC = () => {
             href: "https://www.youtube.com/watch?v=GpcRevrvhY8",
             type:  <p>Service</p>,
             typeColor: "border-green-400 text-green-400 px-1 rounded-lg",
-            tags: [<span>React</span>, <span>React Native</span>, <span>Expo</span>]
+            tags: [
+                <Flutter width="27px" height="27px" color="text-primary fill-current"/>,
+                <Firebase width="30px" height="30px" color="text-primary fill-current"/>,
+                <Figma width="30px" height="30px" color="text-primary fill-current"/>,
+                <Github width="30px" height="30px" color="text-primary fill-current"/>,
+                <Photoshop width="27px" height="27px" color="text-primary fill-current"/>
+            ]
         },
     ]
 
@@ -45,7 +71,13 @@ const Projects:React.FC = () => {
             href: "https://github.com/Youvataque/_Portfolio",
             type:  <p>Abandonné</p>,
             typeColor: "border-red-400 text-red-400 px-1 rounded-lg",
-            tags: [<span>React</span>, <span>React Native</span>, <span>Expo</span>]
+            tags: [
+                <ReactIco width="30px" height="30px" color="text-primary fill-current"/>,
+                <CssIco width="28px" height="28px" color="text-primary fill-current"/>,
+                <Github width="30px" height="30px" color="text-primary fill-current"/>,
+                <Figma width="30px" height="30px" color="text-primary fill-current"/>,
+                <Photoshop width="27px" height="27px" color="text-primary fill-current"/>
+            ]
         },
         {
             title: "SolsÉnergiesBains",
@@ -53,7 +85,16 @@ const Projects:React.FC = () => {
             href: "https://www.solsenergiesbains.com/",
             type:  <p>Prestation</p>,
             typeColor: "border-blue-400 text-blue-400 px-1 rounded-lg",
-            tags: [<span>React</span>, <span>React Native</span>, <span>Expo</span>]
+            tags: [
+                <ReactIco width="30px" height="30px" color="text-primary fill-current"/>,
+                <Firebase width="30px" height="30px" color="text-primary fill-current"/>,
+                <Vite width="29px" height="29px" color="text-primary fill-current"/>,
+                <Tailwind width="30px" height="30px" color="text-primary fill-current"/>,
+                <Typescript width="27px" height="27px" color="text-primary fill-current"/>,
+                <Figma width="30px" height="30px" color="text-primary fill-current"/>,
+                <Github width="30px" height="30px" color="text-primary fill-current"/>,
+                <Photoshop width="27px" height="27px" color="text-primary fill-current"/>
+            ]
         },
         {
             title: "NewBat website",
@@ -61,7 +102,15 @@ const Projects:React.FC = () => {
             href: "https://www.seguin-newbat.fr/",
             type:  <p>Commercial</p>,
             typeColor: "border-orange-400 text-orange-400 px-1 rounded-lg",
-            tags: [<span>React</span>, <span>React Native</span>, <span>Expo</span>]
+            tags: [
+                <ReactIco width="30px" height="30px" color="text-primary fill-current"/>,
+                <Vite width="29px" height="29px" color="text-primary fill-current"/>,
+                <Tailwind width="30px" height="30px" color="text-primary fill-current"/>,
+                <Typescript width="27px" height="27px" color="text-primary fill-current"/>,
+                <Figma width="30px" height="30px" color="text-primary fill-current"/>,
+                <Github width="30px" height="30px" color="text-primary fill-current"/>,
+                <Photoshop width="27px" height="27px" color="text-primary fill-current"/>
+            ]
         },
         {
             title: "_PortfolioV2",
@@ -69,7 +118,15 @@ const Projects:React.FC = () => {
             href: "https://github.com/Youvataque/_Portfoliov2",
             type:  <p>Commercial</p>,
             typeColor: "border-orange-400 text-orange-400 px-1 rounded-lg",
-            tags: [<span>React</span>, <span>React Native</span>, <span>Expo</span>]
+            tags: [
+                <ReactIco width="30px" height="30px" color="text-primary fill-current"/>,
+                <NextIco width="30px" height="30px" color="text-primary fill-current"/>,
+                <Tailwind width="30px" height="30px" color="text-primary fill-current"/>,
+                <Typescript width="27px" height="27px" color="text-primary fill-current"/>,
+                <Figma width="30px" height="30px" color="text-primary fill-current"/>,
+                <Github width="30px" height="30px" color="text-primary fill-current"/>,
+                <Photoshop width="27px" height="27px" color="text-primary fill-current"/>
+            ]
         },
         
     ]
@@ -79,7 +136,7 @@ const Projects:React.FC = () => {
     function header() {
         return (
             <div className="flex flex-col justify-center items-center">
-                <Title text="Retrouvez tous mes projets !" style="text-secondary"/>
+                <Title text="Retrouvez tous mes projets !" style="text-secondary text-center"/>
                 <MainText text="Sur cette page vous pourrez retrouver l'ensemble de mes projets. Qu'ils soient publics ou privés, terminés ou abandonnés, tous seront disponibles ici afin de vous faire une idée de la qualité de mon travail et de l'importance que j'accorde à l'évolution." style="text-primary text-center"/>
             </div>
         );
