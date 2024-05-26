@@ -87,6 +87,7 @@ const Projects:React.FC = () => {
             typeColor: "border-blue-400 text-blue-400 px-1 rounded-lg",
             tags: [
                 <ReactIco width="30px" height="30px" color="text-primary fill-current"/>,
+                <Flutter width="27px" height="27px" color="text-primary fill-current"/>,
                 <Firebase width="30px" height="30px" color="text-primary fill-current"/>,
                 <Vite width="29px" height="29px" color="text-primary fill-current"/>,
                 <Tailwind width="30px" height="30px" color="text-primary fill-current"/>,
