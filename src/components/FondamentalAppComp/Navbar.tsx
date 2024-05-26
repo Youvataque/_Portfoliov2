@@ -1,6 +1,7 @@
 "use client"
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 /////////////////////////////////////////////////////////////////
 // composant navBar de l'app
 const NavBar = () => {
@@ -28,7 +29,9 @@ const NavBar = () => {
     function title() {
         return (
             <Link className="flex items-center justify-center pl-[15%] max-md:pl-3 group" href="/">
-                <img src={"/Img/profilPic.webp"} className="h-12 max-md:h-10 border-2 border-solid border-primary rounded-full mr-2 group-hover:border-secondary" alt="Logo" />
+                <div className="relative w-12 max-md:w-10 h-12 max-md:h-10">
+                    <Image fill src={"/Img/profilPic.webp"} className="border-2 border-solid border-primary rounded-full mr-2 group-hover:border-secondary" alt="Logo" />
+                </div>
                 <h2 className="mt-1 font-semiBold text-2xl max-md:text-[22px] text-primary group-hover:text-secondary">Seguin-dev</h2>
             </Link>
         );

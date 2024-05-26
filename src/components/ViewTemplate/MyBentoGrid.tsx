@@ -7,6 +7,7 @@ import {
   IconTableColumn,
 } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 /////////////////////////////////////////////////////////////////
 // corp du code
@@ -40,9 +41,11 @@ const items = [
   {
     title: "NewBat : l'informatique du bâtiment !",
     description: "Entreprise du batiment ? Vous souhaitez passer au numérique ? Avec NewBat entamez votre transition ! Gérez vos entretiens, vos chantiers ainsi que vos devis avec une simplicité encore inégalé.",
-    header: <div className="w-full flex items-center justify-center pt-2 max-md:pt-0">
-        <img src="/Img/newbat.webp" alt="NewBat" className="h-40 rounded-md max-md:h-32" />
-     </div>,
+    header: <div className="flex items-center justify-center pt-2 max-md:pt-0">
+      <div className="max-md:pt-0 relative h-40 w-80 max-md:w-64 max-md:h-32">
+        <Image fill src="/Img/newbat.webp" alt="NewBat" className="rounded-md" />
+     </div>,  
+    </div>,
     className: "md:col-span-2 bg-foreground z-0",
     icon: pastille("Service", "bg-transparent text-green-400 border-green-400"),
     link: "https://www.youtube.com/watch?v=z0gpEHgiw-M"
@@ -50,9 +53,11 @@ const items = [
   {
     title: "NewBat website",
     description: "Site vitrine servant à présenter plus en détail NewBat et son offre. Si vous êtes une entreprise du bâtiment, vous devriez jeter un œil.",
-    header: <div className="w-full flex items-center justify-center pt-4 max-md:pt-0">
-        <img src="/Img/newbatLogo.webp" alt="NewBat" className="h-28 max-md:h-20 rounded-2xl" />
-    </div>,
+    header: <div className="flex items-center justify-center pt-4 max-md:pt-0 ">
+      <div className="h-28 max-md:h-20 w-28 max-md:w-20 relative">
+        <Image fill src="/Img/newbatLogo.webp" alt="NewBat" className="rounded-2xl" />
+      </div>,
+    </div>, 
     className: "md:col-span-1 bg-foreground z-0",
     icon: pastille("Service", "bg-transparent text-green-400 border-green-400"),
     link: "https://www.seguin-newbat.fr"
@@ -60,9 +65,11 @@ const items = [
   {
     title: "Montpellier Transport",
     description: "Vous en avez assez d'utiliser une application mal conçue au quotidien ? Vous souhaitez profiter d'une ergonomie et d'un design adaptés aux gouts actuels ? Choisissez Montpellier Transport !",
-    header: <div className="w-full flex items-center justify-center pt-4 max-md:pt-0">
-        <img src="/Img/Mt.webp" alt="NewBat" className="h-28 max-md:h-20 rounded-2xl" />
-    </div>,
+    header: <div className="flex items-center justify-center pt-4 max-md:pt-0 ">
+      <div className="h-28 max-md:h-20 w-28 max-md:w-20 relative">
+        <Image fill src="/Img/Mt.webp" alt="NewBat" className="rounded-2xl" />
+      </div>,
+    </div>, 
     className: "md:col-span-1 bg-foreground z-0",
     icon: pastille("Contribution", "bg-transparent text-yellow-400 border-yellow-400"),
     link: "https://www.NotOnline.fr"
@@ -70,8 +77,10 @@ const items = [
   {
     title: "SolsEnergiesBains",
     description:"SolsÉnergiesBains est aujourd'hui équipé d'un site internet sur mesure, piloté par une application mobile. Cela leur permet d'avoir toujours un site internet à la page, sans cots mensuels.",
-    header: <div className="w-full flex items-center justify-center pt-2 max-md:pt-0">
-        <img src="/Img/sebWebsite.webp" alt="solsenergiesbains" className="h-40 rounded-lg max-md:h-32" />
+    header: <div className="flex items-center justify-center pt-2 max-md:pt-0">
+      <div className="max-md:pt-0 relative h-40 w-80 max-md:w-64 max-md:h-32">
+        <Image fill src="/Img/sebWebsite.webp" alt="NewBat" className="rounded-md" />
+      </div>,  
     </div>,
     className: "md:col-span-2 bg-foreground z-0",
     icon: pastille("Prestation", "bg-transparent text-blue-400 border-blue-400"),
