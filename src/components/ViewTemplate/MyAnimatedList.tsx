@@ -9,6 +9,7 @@ interface Item {
   icon: string;
   color: string;
   time: string;
+  link: string;
 }
 
 /////////////////////////////////////////////////////////////////
@@ -18,9 +19,9 @@ let notifications = [
     name: "Site vitrine",
     description: "Apportez un plus à votre entreprise avec un site internet.",
     time: "Starter",
-
     icon: "🖥️",
     color: "border-orange-400 text-orange-400 px-1 rounded-lg",
+    link: "mailto:yannisseguin@gmail.com?subject=Renseignements%20site%20vitrine&body=Bonjour,",
   },
   {
     name: "Site connecté",
@@ -28,6 +29,7 @@ let notifications = [
     time: "Avancé",
     icon: "🌐",
     color: "border-blue-400 text-blue-400 px-1 rounded-lg",
+    link: "mailto:yannisseguin@gmail.com?subject=Renseignements%20site%20internet%20connectée&body=Bonjour,",
   },
   {
     name: "Application mobile",
@@ -35,6 +37,7 @@ let notifications = [
     time: "Avancé",
     icon: "📱",
     color: "border-blue-400 text-blue-400 px-1 rounded-lg",
+    link: "mailto:yannisseguin@gmail.com?subject=Renseignements%20Application%20mobile&body=Bonjour,",
   },
   {
     name: "Service web / mobile",
@@ -42,6 +45,7 @@ let notifications = [
     time: "Économique",
     icon: "💵",
     color: "border-green-400 text-green-400 px-1 rounded-lg",
+    link: "mailto:yannisseguin@gmail.com?subject=Renseignements%20Service%20web%20/%20mobile&body=Bonjour,",
   },
 ];
 
@@ -49,7 +53,7 @@ notifications = Array.from({ length: 10 }, () => notifications).flat();
 
 /////////////////////////////////////////////////////////////////
 // template d'un élément de list
-const Notification = ({ name, description, icon, color, time }: Item) => {
+const Notification = ({ name, description, icon, color, time, link }: Item) => {
   return (
     <figure
       className={cn(
@@ -60,7 +64,11 @@ const Notification = ({ name, description, icon, color, time }: Item) => {
         "transform-gpu dark:bg-transparent dark:backdrop-blur-md dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]",
       )}
     >
-      <div className="flex flex-row items-center gap-3">
+      <a
+        href={link}
+        target="_blank"
+        className="flex flex-row items-center gap-3 group"
+      >
         <div
           className="flex h-10 w-10 items-center justify-center rounded-2xl"
           style={{
@@ -70,16 +78,16 @@ const Notification = ({ name, description, icon, color, time }: Item) => {
           <span className="text-lg">{icon}</span>
         </div>
         <div className="flex flex-col overflow-hidden">
-          <figcaption className="flex flex-row items-center whitespace-pre text-lg font-medium text-primary ">
+          <figcaption className="flex flex-row items-center whitespace-pre text-lg font-medium text-primary group-hover:text-secondary">
             <span className="text-sm sm:text-lg">{name}</span>
             <span className="mx-1">·</span>
             <span className={cn("text-sm border", color)}>{time}</span>
           </figcaption>
-          <p className="text-sm font-normal text-primary">
+          <p className="text-sm font-normal text-primary group-hover:text-secondary">
             {description}
           </p>
         </div>
-      </div>
+      </a>
     </figure>
   );
 };
@@ -88,7 +96,7 @@ const Notification = ({ name, description, icon, color, time }: Item) => {
 // corp du code
 export function MyAnimatedList() {
   return (
-    <div className="relative flex h-[270px] w-full max-w-[32rem] flex-col overflow-hidden border border-primary bg-foreground rounded-2xl shadow-lg">
+    <div className="relative flex h-[270px] w-full max-w-[32rem] flex-col overflow-hidden border border-primary hover:border-secondary bg-foreground rounded-2xl shadow-lg">
       <AnimatedList
         delay={2700}
       >
