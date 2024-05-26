@@ -147,7 +147,7 @@ const Projects:React.FC = () => {
     // zone des projets mobile
     function cardMobileZone() {
         return (
-            <div className="flex flex-col w-full items-start">
+            <div className="flex flex-col w-full items-start max-md:items-center">
                 <SousTitle text="Projets mobile :" style="text-secondary pb-8"/>
                 <div className="flex flex-wrap justify-center items-center w-full">
                     {cardMobileData.reverse().map((card, index) => (
@@ -170,7 +170,7 @@ const Projects:React.FC = () => {
     // zone des projets web
     function cardDesktopZone() {
         return (
-            <div className="flex flex-col w-full items-start mt-16">
+            <div className="flex flex-col w-full items-start max-md:items-center mt-16">
                 <SousTitle text="Projets web :" style="text-secondary pb-8"/>
                 <div className="flex flex-wrap justify-center items-center w-full">
                     {cardDesktopData.reverse().map((card, index) => (
