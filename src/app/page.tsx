@@ -1,7 +1,6 @@
 "use client";
 import BodyTemplate from "@/components/FondamentalAppComp/BodyTemplate"; 
 import Title from "@/components/ViewTemplate/Title";
-import Text from "@/components/ViewTemplate/Text";
 import { Dock, DockIcon } from "@/components/magicui/dock";
 import Youtube from "@/Icon/Youtube";
 import Twitter from "@/Icon/Twitter";
@@ -12,6 +11,7 @@ import { MyBentoGrid } from "@/components/ViewTemplate/MyBentoGrid";
 import IconCloud from "@/components/magicui/icon-cloud";
 import { MyAnimatedList } from "@/components/ViewTemplate/MyAnimatedList";
 import Footer from "@/components/FondamentalAppComp/Footer";
+import SousTitle from "@/components/ViewTemplate/SousTitle";
 export default function Home() {
 
   /////////////////////////////////////////////////////////////////
@@ -95,7 +95,7 @@ export default function Home() {
   function header(){
     return <div className="flex flex-row justify-between items-center w-[50vw] max-2xl:w-[70vw] max-md:w-[95vw]">
       <div className="flex flex-col w-full items-start">
-        <Text text="Bienvenue ! Je suis -" style="text-secondary" />
+        <SousTitle text="Bienvenue ! Je suis -" style="text-secondary" />
         <Title text="Yannis Seguin" style="text-secondary" />
         {docZone()}
         {mobileDocZone()}
@@ -126,18 +126,18 @@ export default function Home() {
         <div className="md:hidden w-[95vw]">{textCustom()}</div>
         <div className="pt-[20vw] max-2xl:pt-[16vw] max-md:pt-32"/>
         <div className="w-[50vw] max-2xl:w-[70vw] max-md:w-[95vw] flex items-center justify-start pb-4">
-          <Text text="Mes derniers projets :" style="text-secondary" />
+          <SousTitle text="Mes derniers projets :" style="text-secondary" />
         </div>
         <MyBentoGrid />
         <div className="pt-[20vw] max-2xl:pt-[16vw] max-md:pt-32"/>
         <div className="w-[50vw] max-2xl:w-[70vw] max-md:w-[95vw] flex items-center justify-start pb-4">
-          <Text text="Quelques informations :" style="text-secondary"/>
+          <SousTitle text="Quelques informations :" style="text-secondary"/>
         </div>
         <div className="flex flex-row max-md:flex-col-reverse justify-between max-md:justify-center items-center w-[50vw] max-2xl:w-[70vw] max-md:w-[95vw]">
           {iconCloud()}
           <MyAnimatedList/>
         </div>
-        <div className="pt-[16vw] max-2xl:pt-[16vw] max-md:pt-12"/>
+        <div className="pt-[16vw] max-md:pt-12"/>
         <Footer/>
         <div className="pb-4"/>
       </div>
