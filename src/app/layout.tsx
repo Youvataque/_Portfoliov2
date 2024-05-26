@@ -18,6 +18,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+        <meta property="og:title" content="Seguin - Website" />
+        <meta property="og:description" content="Un site internet ? Une application mobile ? Ou bien un projet encore plus fou ? Dans tout les cas je suis la solution !" />
+        <meta property="og:image" content="/Img/favPres.webp" />
+      </head>
       <body className={cn(inter.className, "bg-background overflow-x-hidden")}>
         <Navbar /> 
         {children}
