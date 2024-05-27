@@ -66,7 +66,7 @@ export default function Home() {
   // composant d'icon animé
   function iconCloud() {
     return (
-      <div className="relative w-[50vw] max-2xl:w-[70vw] max-md:w-[95vw] flex max-md:justify-center items-center bg-transparent">
+      <div className="relative w-[50vw] max-2xl:w-[70vw] max-md:w-[95vw] flex max-lg:justify-center items-center bg-transparent">
         <div className="w-96 max-2xl:w-80 max-md:w-64"><IconCloud iconSlugs={cloudIconsData.iconSlugs} /></div>
       </div>
     );
@@ -88,7 +88,7 @@ export default function Home() {
         <div className="w-[50vw] max-2xl:w-[70vw] max-md:w-[95vw] flex items-center justify-start pb-4">
           <SousTitle text="Quelques informations :" style="text-secondary"/>
         </div>
-        <div className="flex flex-row max-md:flex-col-reverse justify-between max-md:justify-center items-center w-[50vw] max-2xl:w-[70vw] max-md:w-[95vw]">
+        <div className="flex flex-row max-lg:flex-col-reverse justify-between max-lg:justify-center items-center w-[50vw] max-2xl:w-[70vw] max-md:w-[95vw]">
           {iconCloud()}
           <MyAnimatedList/>
         </div>

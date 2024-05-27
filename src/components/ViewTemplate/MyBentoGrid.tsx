@@ -13,7 +13,7 @@ import Image from "next/image";
 // corp du code
 export function MyBentoGrid() {
   return (
-    <BentoGrid className="w-[50vw] max-2xl:w-[70vw] max-md:w-[95vw] mx-auto md:auto-rows-[20rem]">
+    <BentoGrid className="w-[50vw] max-2xl:w-[70vw] max-md:w-[95vw] mx-auto lg:auto-rows-[20rem]">
       {items.map((item, i) => (
         <BentoGridItem
           key={i}
@@ -46,31 +46,31 @@ const items = [
         <Image fill src="/Img/newbat.webp" alt="NewBat" className="rounded-md" />
      </div>,  
     </div>,
-    className: "md:col-span-2 bg-foreground z-0",
+    className: "lg:col-span-2 bg-foreground z-0",
     icon: pastille("Service", "bg-transparent text-green-400 border-green-400"),
     link: "https://www.youtube.com/watch?v=z0gpEHgiw-M"
   },
   {
     title: "NewBat website",
     description: "Site vitrine servant à présenter plus en détail NewBat et son offre. Si vous êtes une entreprise du bâtiment, vous devriez jeter un œil.",
-    header: <div className="flex items-center justify-center pt-4 max-md:pt-0 ">
+    header: <div className="flex items-center justify-center pt-4 max-lg:pt-0 ">
       <div className="h-28 max-md:h-20 w-28 max-md:w-20 relative">
         <Image fill src="/Img/newbatLogo.webp" alt="NewBat" className="rounded-2xl" />
       </div>,
     </div>, 
-    className: "md:col-span-1 bg-foreground z-0",
+    className: "lg:col-span-1 bg-foreground z-0",
     icon: pastille("Service", "bg-transparent text-green-400 border-green-400"),
     link: "https://www.seguin-newbat.fr"
   },
   {
     title: "Montpellier Transport",
     description: "Vous en avez assez d'utiliser une application mal conçue au quotidien ? Vous souhaitez profiter d'une ergonomie et d'un design adaptés aux gouts actuels ? Choisissez Montpellier Transport !",
-    header: <div className="flex items-center justify-center pt-4 max-md:pt-0 ">
+    header: <div className="flex items-center justify-center pt-4 max-lg:pt-0 ">
       <div className="h-28 max-md:h-20 w-28 max-md:w-20 relative">
         <Image fill src="/Img/Mt.webp" alt="NewBat" className="rounded-2xl" />
       </div>,
     </div>, 
-    className: "md:col-span-1 bg-foreground z-0",
+    className: "lg:col-span-1 bg-foreground z-0",
     icon: pastille("Contribution", "bg-transparent text-yellow-400 border-yellow-400"),
     link: "https://www.NotOnline.fr"
   },
@@ -82,7 +82,7 @@ const items = [
         <Image fill src="/Img/sebWebsite.webp" alt="NewBat" className="rounded-md" />
       </div>,  
     </div>,
-    className: "md:col-span-2 bg-foreground z-0",
+    className: "lg:col-span-2 bg-foreground z-0",
     icon: pastille("Prestation", "bg-transparent text-blue-400 border-blue-400"),
     link: "https://www.solsenergiesbains.com"
   },

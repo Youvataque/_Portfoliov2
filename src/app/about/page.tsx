@@ -43,7 +43,7 @@ const About:React.FC = () => {
         {
           title: "GitHub",
           description:
-            "Si vous souhaitez comprendre les ficelles de certains de mes projets vous en retrouverez la majorité ici.",
+            "Si vous souhaitez comprendre les ficelles de certains de mes projets c'est par ici !",
           link: "https://github.com/youvataque",
         },
     ];
