@@ -67,7 +67,9 @@ export default function Home() {
   function iconCloud() {
     return (
       <div className="relative w-[50vw] max-2xl:w-[70vw] max-md:w-[95vw] flex max-lg:justify-center items-center bg-transparent">
-        <div className="w-96 max-2xl:w-80 max-md:w-64"><IconCloud iconSlugs={cloudIconsData.iconSlugs} /></div>
+        <div className="w-96 max-2xl:w-80 max-md:w-64 pb-12 max-2xl:pb-10 max-lg:pb-0">
+          <IconCloud iconSlugs={cloudIconsData.iconSlugs} />
+        </div>
       </div>
     );
   }
