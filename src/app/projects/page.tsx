@@ -136,7 +136,7 @@ const Projects:React.FC = () => {
     // zone de présentation (header)
     function header() {
         return (
-            <div className="flex flex-col justify-center items-center">
+            <div className="min-h-screen flex items-center justify-center flex-col">
                 <Title text="Retrouvez tous mes projets !" style="text-secondary text-center"/>
                 <MainText text="Sur cette page vous pourrez retrouver l'ensemble de mes projets. Qu'ils soient publics ou privés, terminés ou abandonnés, tous seront disponibles ici afin de vous faire une idée de la qualité de mon travail et de l'importance que j'accorde à l'évolution." style="text-primary text-center"/>
             </div>
@@ -194,12 +194,11 @@ const Projects:React.FC = () => {
     return (
         <BodyTemplate>
             <div className="flex flex-col justify-center items-center w-[50vw] max-2xl:w-[80vw] max-md:w-[95vw]">
-                <div className="pt-[4vw] max-2xl:pt-[8vw] max-md:pt-16"/>
                 {header()}
-                <div className="pt-[24vw] max-2xl:pt-[27vw] max-md:pt-32"/>
-                {cardMobileZone()}
-                {cardDesktopZone()}
-                <div className="pt-[16vw] max-md:pt-12"/>
+                <div className="min-h-screen flex items-center justify-center flex-col">
+                    {cardMobileZone()}
+                    {cardDesktopZone()}
+                </div>
                 <Footer/>
                 <div className="pb-4"/>
             </div>

@@ -47,7 +47,7 @@ export default function Home() {
   /////////////////////////////////////////////////////////////////
   // header du composant avec pp et infos
   function header(){
-    return <div className="flex flex-row justify-between items-center w-[50vw] max-2xl:w-[70vw] max-md:w-[95vw]">
+    return <div className="flex flex-row justify-between items-center  min-h-screen">
       <div className="flex flex-col w-full items-start">
         <SousTitle text="Bienvenue ! Je suis -" style="text-secondary" />
         <Title text="Yannis Seguin" style="text-secondary" />
@@ -75,26 +75,39 @@ export default function Home() {
   }
 
   /////////////////////////////////////////////////////////////////
+  // section affichant tout les projets sous forme de bento
+  function projectZone() {
+    return <div className="min-h-screen flex items-center justify-center flex-col">
+      <div className="w-[50vw] max-2xl:w-[70vw] max-md:w-[95vw] flex items-center justify-start pb-4">
+        <SousTitle text="Mes derniers projets :" style="text-secondary" />
+      </div>
+      <MyBentoGrid />
+    </div>
+  }
+
+  /////////////////////////////////////////////////////////////////
+  // section affichant toutes les informations de l'accueil
+  function infoZone() {
+    return <div className="min-h-screen flex items-center justify-center flex-col">
+      <div className="w-[50vw] max-2xl:w-[70vw] max-md:w-[95vw] flex items-center justify-start pb-4">
+        <SousTitle text="Quelques informations :" style="text-secondary"/>
+      </div>
+      <div className="flex flex-row max-lg:flex-col-reverse justify-between max-lg:justify-center items-center w-[50vw] max-2xl:w-[70vw] max-md:w-[95vw]">
+        {iconCloud()}
+        <MyAnimatedList/>
+      </div>
+    </div>
+  }
+
+  /////////////////////////////////////////////////////////////////
   // corp du code
   return (
     <BodyTemplate>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center w-[50vw] max-2xl:w-[70vw] max-md:w-[95vw]">
         {header()}
         <div className="md:hidden w-[95vw]">{textCustom()}</div>
-        <div className="pt-[20vw] max-2xl:pt-[16vw] max-md:pt-32"/>
-        <div className="w-[50vw] max-2xl:w-[70vw] max-md:w-[95vw] flex items-center justify-start pb-4">
-          <SousTitle text="Mes derniers projets :" style="text-secondary" />
-        </div>
-        <MyBentoGrid />
-        <div className="pt-[20vw] max-2xl:pt-[16vw] max-md:pt-32"/>
-        <div className="w-[50vw] max-2xl:w-[70vw] max-md:w-[95vw] flex items-center justify-start pb-4">
-          <SousTitle text="Quelques informations :" style="text-secondary"/>
-        </div>
-        <div className="flex flex-row max-lg:flex-col-reverse justify-between max-lg:justify-center items-center w-[50vw] max-2xl:w-[70vw] max-md:w-[95vw]">
-          {iconCloud()}
-          <MyAnimatedList/>
-        </div>
-        <div className="pt-[16vw] max-md:pt-12"/>
+        {projectZone()}
+        {infoZone()}
         <Footer/>
         <div className="pb-4"/>
       </div>

@@ -60,7 +60,7 @@ const About:React.FC = () => {
     /////////////////////////////////////////////////////////////////
     // header du composant avec pp et infos
     function header(){
-        return <div className="flex flex-row justify-between items-center w-[50vw] max-2xl:w-[70vw] max-md:w-[95vw]">
+        return <div className="flex flex-row justify-between items-center h-full">
         <div className="flex flex-col w-full items-start">
             <SousTitle text="Un peu sur moi -" style="text-secondary" />
             <Title text="Yannis Seguin" style="text-secondary" />
@@ -81,16 +81,18 @@ const About:React.FC = () => {
     return (
         <BodyTemplate>
             <div className="flex flex-col justify-center items-center w-[50vw] max-2xl:w-[70vw] max-md:w-[95vw]">
-                {header()}
-                <div className="md:hidden">
+                <div className="flex flex-col justify-center items-center min-h-screen">
+                  {header()}
+                  <div className="md:hidden">
                     {description()}
+                  </div>
                 </div>
-                <div className="pt-[20vw] max-2xl:pt-[16vw] max-md:pt-32"/>
-                <SousTitle text="Mes contacts :" style="text-secondary" />
-                <div className="max-w-5xl mx-auto px-8 mt-8">
+                <div className="flex flex-col justify-center items-center min-h-screen w-screen">
+                  <SousTitle text="Mes contacts :" style="text-secondary" />
+                  <div className="max-w-5xl mx-auto px-8 mt-8">
                     <HoverEffect items={contactData} />
+                  </div>
                 </div>
-                <div className="pt-[19vw] max-2xl:pt-[16vw] max-md:pt-32"/>
                 <Footer/>
                 <div className="pb-4"/>
             </div>
