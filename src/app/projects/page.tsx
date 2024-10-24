@@ -46,6 +46,20 @@ const Projects:React.FC = () => {
                 <Github key="github2" width="30px" height="30px" color="text-primary fill-current"/>
             ]
         },
+		{
+            title: "HomeFlix - YggPowered",
+            description: "Mettez-vous aussi en place votre propre plateforme de streaming pour en finir avec Netflix et compagnie. Directement reliée à YggTorrent, Homeflix fera le pont entre votre serveur et vous pour une expérience fluide !",
+            href: "https://github.com/Youvataque/HomeFlix-yggpowered",
+            type: <p>OpenSource</p>,
+            typeColor: "border-purple-400 text-purple-400 px-1 rounded-lg",
+            tags: [
+                <Flutter key="flutter2" width="27px" height="27px" color="text-primary fill-current"/>,
+                <ReactIco key="react1" width="30px" height="30px" color="text-primary fill-current"/>,
+				<Typescript key="typescript1" width="27px" height="27px" color="text-primary fill-current"/>,
+                <Github key="github2" width="30px" height="30px" color="text-primary fill-current"/>,
+				<Photoshop key="photoshop2" width="27px" height="27px" color="text-primary fill-current"/>
+            ]
+        },
         {
             title: "NewBat : l'informatique du bâtiment",
             description: "Entreprise du batiment ? Vous souhaitez passer au numérique ? Avec NewBat entamez votre transition ! Gérez vos entretiens, vos chantiers ainsi que vos devis avec une simplicité encore inégalé.",

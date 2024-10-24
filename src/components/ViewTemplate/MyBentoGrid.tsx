@@ -45,16 +45,16 @@ const items = [
     link: "https://www.youtube.com/watch?v=z0gpEHgiw-M"
   },
   {
-    title: "NewBat website",
-    description: "Site vitrine servant à présenter plus en détail NewBat et son offre. Si vous êtes une entreprise du bâtiment, vous devriez jeter un œil.",
+    title: "HomeFlix",
+    description: "“Mettez-vous aussi en place votre propre plateforme de streaming pour en finir avec Netflix et compagnie. Directement reliée à YggTorrent, Homeflix fera le pont entre votre serveur et vous pour une expérience fluide !",
     header: <div className="flex items-center justify-center pt-4 max-lg:pt-0 ">
       <div className="h-28 max-md:h-20 w-28 max-md:w-20 relative">
-        <Image fill src="/Img/newbatLogo.webp" alt="NewBat" className="rounded-2xl" />
+        <Image fill src="/Img/homeflixLogo.webp" alt="NewBat" className="rounded-2xl" />
       </div>,
     </div>, 
     className: "lg:col-span-1 bg-foreground z-0",
     icon: pastille("Service", "bg-transparent text-green-400 border-green-400"),
-    link: "https://www.seguin-newbat.fr"
+    link: "https://github.com/Youvataque/HomeFlix-yggpowered"
   },
   {
     title: "Montpellier Transport",
