@@ -37,7 +37,7 @@ const Projects:React.FC = () => {
         {
             title: "Montpellier Transport",
             description: "Vous en avez assez d'utiliser une application mal conçue au quotidien ? Vous souhaitez profiter d'une ergonomie et d'un design adaptés aux goûts actuels ? Choisissez Montpellier Transport ! Attention est en cours de développement !",
-            href: "https://notOnline.com",
+            href: "https://montpellier-transports.fr/",
             type: <p>Contribution</p>,
             typeColor: "border-yellow-400 text-yellow-400 px-1 rounded-lg",
             tags: [
