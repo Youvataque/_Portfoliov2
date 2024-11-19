@@ -70,7 +70,7 @@ const items = [
   },
   {
     title: "SolsEnergiesBains",
-    description:"SolsÉnergiesBains est aujourd'hui équipé d'un site internet sur mesure, piloté par une application mobile. Cela leur permet d'avoir toujours un site internet à la page, sans cots mensuels.",
+    description:"SolsÉnergiesBains est aujourd'hui équipé d'un site internet sur mesure, piloté par une application mobile. Cela leur permet d'avoir toujours un site internet à la page, sans couts mensuels.",
     header: <div className="flex items-center justify-center pt-2 max-md:pt-0">
       <div className="max-md:pt-0 relative h-40 w-80 max-md:w-64 max-md:h-32">
         <Image fill src="/Img/sebWebsite.webp" alt="NewBat" className="rounded-md" />
