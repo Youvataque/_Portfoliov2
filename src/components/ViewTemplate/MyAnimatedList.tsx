@@ -33,7 +33,7 @@ let notifications = [
   },
   {
     name: "Application mobile",
-    description: "De la gestion à la prestation client le marché mobile est le plus lucratif.",
+    description: "Développez votre entreprise ou réalisez votre rève avec une application mobile !",
     time: "Avancé",
     icon: "📱",
     color: "border-blue-400 text-blue-400 px-1 rounded-lg",
