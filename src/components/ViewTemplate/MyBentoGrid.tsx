@@ -50,8 +50,8 @@ const items = [
     header: <div className="flex items-center justify-center pt-4 max-lg:pt-0 ">
       <div className="h-28 max-md:h-20 w-28 max-md:w-20 relative">
         <Image fill src="/Img/homeflixLogo.webp" alt="NewBat" className="rounded-2xl" />
-      </div>,
-    </div>, 
+      </div>
+    </div>,
     className: "lg:col-span-1 bg-foreground z-0",
     icon: pastille("Service", "bg-transparent text-green-400 border-green-400"),
     link: "https://github.com/Youvataque/HomeFlix-yggpowered"
