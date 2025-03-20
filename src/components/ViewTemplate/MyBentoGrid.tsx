@@ -53,7 +53,7 @@ const items = [
       </div>
     </div>,
     className: "lg:col-span-1 bg-foreground z-0",
-    icon: pastille("Service", "bg-transparent text-green-400 border-green-400"),
+    icon: pastille("openSource", "bg-transparent border-purple-400 text-purple-400"),
     link: "https://github.com/Youvataque/HomeFlix-yggpowered"
   },
   {
