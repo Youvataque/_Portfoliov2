@@ -47,8 +47,8 @@ const Projects:React.FC = () => {
             ]
         },
 		{
-            title: "HomeFlix - YggPowered",
-            description: "Mettez-vous aussi en place votre propre plateforme de streaming pour en finir avec Netflix et compagnie. Directement reliée à YggTorrent, Homeflix fera le pont entre votre serveur et vous pour une expérience fluide !",
+            title: "HomeFlix",
+            description: "Mettez vous aussi en place votre propre plateforme vidéo ! Relié à la source de votre choix vous pourrez télécharger, regarder et administrer votre contenue de façon fluide et confortable.",
             href: "https://github.com/Youvataque/HomeFlix-yggpowered",
             type: <p>OpenSource</p>,
             typeColor: "border-purple-400 text-purple-400 px-1 rounded-lg",

@@ -46,7 +46,7 @@ const items = [
   },
   {
     title: "HomeFlix",
-    description: "Mettez-vous aussi en place votre propre plateforme de streaming pour en finir avec Netflix et compagnie. Directement reliée à YggTorrent, Homeflix fera le pont entre votre serveur et vous pour une expérience fluide !",
+    description: "Mettez vous aussi en place votre propre plateforme vidéo ! Relié à la source de votre choix vous pourrez télécharger, regarder et administrer votre contenue.",
     header: <div className="flex items-center justify-center pt-4 max-lg:pt-0 ">
       <div className="h-28 max-md:h-20 w-28 max-md:w-20 relative">
         <Image fill src="/Img/homeflixLogo.webp" alt="NewBat" className="rounded-2xl" />
