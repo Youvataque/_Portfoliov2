@@ -33,6 +33,7 @@ export default function Home() {
       "figma",
       "nextjs",
       "tailwindcss",
+      "docker"
     ],
    };
 

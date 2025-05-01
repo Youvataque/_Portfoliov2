@@ -1,5 +1,6 @@
 import Github from "@/Icon/Github";
 import CssIco from "@/Icon/tech/CssIco";
+import DockerIco from "@/Icon/tech/DockerIco";
 import Figma from "@/Icon/tech/Figma";
 import Firebase from "@/Icon/tech/Firebase";
 import Flutter from "@/Icon/tech/Flutter";
@@ -15,6 +16,7 @@ import MainText from "@/components/ViewTemplate/MainText";
 import ProjectCard from "@/components/ViewTemplate/ProjectCard";
 import SousTitle from "@/components/ViewTemplate/SousTitle";
 import Title from "@/components/ViewTemplate/Title";
+import { DockIcon } from "@/components/magicui/dock";
 
 const Projects:React.FC = () => {
 
@@ -57,7 +59,8 @@ const Projects:React.FC = () => {
                 <ReactIco key="react1" width="30px" height="30px" color="text-primary fill-current"/>,
 				<Typescript key="typescript1" width="27px" height="27px" color="text-primary fill-current"/>,
                 <Github key="github2" width="30px" height="30px" color="text-primary fill-current"/>,
-				<Photoshop key="photoshop2" width="27px" height="27px" color="text-primary fill-current"/>
+				<Photoshop key="photoshop2" width="27px" height="27px" color="text-primary fill-current"/>,
+                <DockerIco key="docker2" width="33px" height="33px" color="text-primary fill-current"/>
             ]
         },
         {
