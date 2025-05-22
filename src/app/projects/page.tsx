@@ -117,7 +117,7 @@ const Projects:React.FC = () => {
         {
             title: "NewBat website",
             description: "Site vitrine servant à présenter plus en détail NewBat et son offre. Si vous êtes une entreprise du bâtiment, vous devriez jeter un œil.",
-            href: "https://www.seguin-newbat.fr/",
+            href: "https://gestionnaireinterventions.web.app/",
             type:  <p>Commercial</p>,
             typeColor: "border-orange-400 text-orange-400 px-1 rounded-lg",
             tags: [
