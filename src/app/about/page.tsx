@@ -52,7 +52,7 @@ const About:React.FC = () => {
     // mini description de mon parcours
     function description() {
         return <MainText 
-            text="Passionné d'informatique depuis toujours, j'ai débuté en bricolant des ordinateurs à 10 ans. En entrant au lycée, j'ai trouvé un certain plaisir dans le scripting avec Python pour finalement trouver ma vocation en 2023 avec le développement mobile (SwiftUI à cette époque). Je suis aujourd'hui développeur Front-end en React.js et Flutter."
+            text="Passionné d'informatique depuis toujours, j'ai débuté en bricolant des ordinateurs à 10 ans. En entrant au lycée, j'ai trouvé un certain plaisir dans le scripting avec Python pour finalement trouver ma vocation en 2023 avec le développement mobile (SwiftUI à cette époque). Je suis aujourd'hui développeur Full-stack en React.js et Flutter."
             style="text-primary pt-4"
         />
     }
