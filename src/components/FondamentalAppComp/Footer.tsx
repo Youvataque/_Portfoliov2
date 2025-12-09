@@ -1,8 +1,8 @@
 /////////////////////////////////////////////////////////////////
 // composant footer
-const Footer:React.FC = () => {
-    return <p className="text-primary text-lg max-md:text-sm">
-        Créé et designé par Yannis Seguin
+const Footer: React.FC = () => {
+    return <p className="text-primary text-xs italic">
+        Créé et designé par SEGUIN Yannis
     </p>
 }
 
