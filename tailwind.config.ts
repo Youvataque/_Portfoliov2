@@ -7,7 +7,7 @@ const config = {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
-	],
+  ],
   prefix: "",
   theme: {
     container: {
@@ -22,22 +22,22 @@ const config = {
         '2xl': '2000px'
       },
       fontSize: {
-        'md' : '16px',
-        '3.5xl' : ['35px', "1.2"],
-        '4xl' : ['45px', "1.2"],
+        'md': '16px',
+        '3.5xl': ['35px', "1.2"],
+        '4xl': ['45px', "1.2"],
         '8xl': ['80px', "1.2"],
       },
-      colors : {
+      colors: {
         background: "#11131F",
         foreground: "#141726",
         primary: "#D6E1FF",
         secondary: "#9EB1FF",
-        borderColor : "#304384",
-        elementColor : "#182449",
-        accentColor : "#1d2e62",
+        borderColor: "#304384",
+        elementColor: "#182449",
+        accentColor: "#1d2e62",
       },
       borderRadius: {
-        
+
       },
       keyframes: {
         "accordion-down": {
@@ -56,7 +56,7 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        grid: "grid 15s linear infinite",
+        grid: "grid 30s linear infinite",
       },
       borderWidth: {
         DEFAULT: "1px",

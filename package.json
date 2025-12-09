@@ -14,7 +14,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.2.6",
-    "next": "14.2.3",
+    "next": "^14.2.33",
     "next-theme": "^0.1.5",
     "react": "^18",
     "react-dom": "^18",
@@ -29,7 +29,7 @@
     "@types/react-dom": "^18",
     "autoprefixer": "^10.4.19",
     "eslint": "^8",
-    "eslint-config-next": "14.2.3",
+    "eslint-config-next": "^16.0.8",
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"

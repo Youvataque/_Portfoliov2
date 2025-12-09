@@ -39,7 +39,7 @@ const NavBar = () => {
 
     /////////////////////////////////////////////////////////////////
     // template de lien
-    function linkTemplate(title:string, dest:string) {
+    function linkTemplate(title: string, dest: string) {
         const linkClass = `font-semiBold text-lg hover:text-secondary text-primary`;
         return <Link className={linkClass} href={dest}>{title}</Link>;
     }
@@ -50,7 +50,7 @@ const NavBar = () => {
         return (
             <div className='flex items-center justify-center pr-[15%] max-md:pr-3'>
                 {linkTemplate("Projets", '/projects')}
-                <div className='w-6 max-md:w-3'/>
+                <div className='w-6 max-md:w-3' />
                 {linkTemplate("Infos", '/about')}
                 <div className='w-6 max-md:w-4' />
             </div>
@@ -60,7 +60,7 @@ const NavBar = () => {
     /////////////////////////////////////////////////////////////////
     // code principale
     return (
-        <div className={`w-screen h-16 fixed top-0 flex items-center justify-between backdrop-blur-xl z-10 transition-all duration-200 ease-in-out ${scrolled ? 'border-b border-solid border-gray-800' : 'border-b border-solid border-background'}`}>
+        <div className={`w-screen h-16 fixed top-0 flex items-center justify-between backdrop-blur-xl z-50 transition-all duration-200 ease-in-out ${scrolled ? 'border-b border-solid border-gray-800' : 'border-b border-solid border-background'}`}>
             {title()}
             {links()}
         </div>
