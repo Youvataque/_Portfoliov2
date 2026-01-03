@@ -4,15 +4,15 @@ import { PinContainer } from "../ui/3d-spin";
 import { cn } from "@/lib/utils";
 
 interface ProjectCardProps {
-    title: string;
-    description: string;
-    href: string;
-    type: JSX.Element;
-    typeColor: string;
-    tags: JSX.Element[];
+  title: string;
+  description: string;
+  href: string;
+  type: JSX.Element;
+  typeColor: string;
+  tags: JSX.Element[];
 }
 
-const ProjectCard:React.FC<ProjectCardProps> = ({title, description, href, tags, type, typeColor}) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, href, tags, type, typeColor }) => {
   return (
     <div className="h-[25rem] w-min flex items-start justify-start ">
       <PinContainer
@@ -29,15 +29,15 @@ const ProjectCard:React.FC<ProjectCardProps> = ({title, description, href, tags,
             </span>
           </div>
           <span className={cn("text-sm border w-min mt-1", typeColor)}>{type}</span>
-          <div className="flex-grow"/>
-          <div className="flex flex-wrap items-center w-full pb-2 h-min rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-violet-400 to-secondary px-1">
+          <div className="flex-grow" />
+          <div className="flex flex-wrap items-center gap-2 mt-4">
             {tags.map((tag, index) => (
-                <div 
-                  key={index}
-                  className="pl-1 pt-2"
-                >
-                    {tag}
-                </div>
+              <div
+                key={index}
+                className="text-neutral-400"
+              >
+                {tag}
+              </div>
             ))}
           </div>
         </div>

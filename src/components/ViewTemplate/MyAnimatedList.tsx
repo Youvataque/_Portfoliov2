@@ -96,7 +96,7 @@ const Notification = ({ name, description, icon, color, time, link }: Item) => {
 // corp du code
 export function MyAnimatedList() {
   return (
-    <div className="relative flex h-[270px] w-full max-w-[32rem] flex-col items-center justify-center overflow-hidden border border-primary hover:border-secondary bg-foreground rounded-2xl shadow-lg">
+    <div className="relative flex h-[270px] w-full max-w-[32rem] flex-col items-center justify-center overflow-hidden border border-white/10 hover:border-white/20 bg-white/5 dark:bg-black/20 backdrop-blur-md rounded-3xl shadow-2xl shadow-black/20 transition-all duration-300">
       <AnimatedList
         delay={2700}
       >

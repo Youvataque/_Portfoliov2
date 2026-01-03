@@ -1,15 +1,17 @@
-import Github from "@/Icon/Github";
-import CssIco from "@/Icon/tech/CssIco";
-import DockerIco from "@/Icon/tech/DockerIco";
-import Figma from "@/Icon/tech/Figma";
-import Firebase from "@/Icon/tech/Firebase";
-import Flutter from "@/Icon/tech/Flutter";
-import NextIco from "@/Icon/tech/NextIco";
-import Photoshop from "@/Icon/tech/Photoshop";
-import ReactIco from "@/Icon/tech/ReactIco";
-import Tailwind from "@/Icon/tech/Tailwind";
-import Typescript from "@/Icon/tech/Typescript";
-import Vite from "@/Icon/tech/Vite";
+import {
+    SiGithub,
+    SiFlutter,
+    SiFirebase,
+    SiAdobephotoshop,
+    SiReact,
+    SiTypescript,
+    SiDocker,
+    SiNextdotjs,
+    SiTailwindcss,
+    SiVite,
+    SiFigma,
+    SiCss3
+} from "react-icons/si";
 import BodyTemplate from "@/components/FondamentalAppComp/BodyTemplate";
 import Footer from "@/components/FondamentalAppComp/Footer";
 import MainText from "@/components/ViewTemplate/MainText";
@@ -29,10 +31,10 @@ const Projects: React.FC = () => {
             type: <p>Abandonné</p>,
             typeColor: "border-red-400 text-red-400 px-1 rounded-lg",
             tags: [
-                <Flutter key="flutter1" width="27px" height="27px" color="text-primary fill-current" />,
-                <Firebase key="firebase1" width="30px" height="30px" color="text-primary fill-current" />,
-                <Github key="github1" width="30px" height="30px" color="text-primary fill-current" />,
-                <Photoshop key="photoshop1" width="27px" height="27px" color="text-primary fill-current" />
+                <SiFlutter key="flutter1" className="w-5 h-5 text-red-400" />,
+                <SiFirebase key="firebase1" className="w-5 h-5 text-red-400" />,
+                <SiGithub key="github1" className="w-5 h-5 text-red-400" />,
+                <SiAdobephotoshop key="photoshop1" className="w-5 h-5 text-red-400" />
             ]
         },
         {
@@ -42,9 +44,9 @@ const Projects: React.FC = () => {
             type: <p>Contribution</p>,
             typeColor: "border-yellow-400 text-yellow-400 px-1 rounded-lg",
             tags: [
-                <Flutter key="flutter2" width="27px" height="27px" color="text-primary fill-current" />,
-                <Firebase key="firebase2" width="30px" height="30px" color="text-primary fill-current" />,
-                <Github key="github2" width="30px" height="30px" color="text-primary fill-current" />
+                <SiFlutter key="flutter2" className="w-5 h-5 text-yellow-400" />,
+                <SiFirebase key="firebase2" className="w-5 h-5 text-yellow-400" />,
+                <SiGithub key="github2" className="w-5 h-5 text-yellow-400" />
             ]
         },
         {
@@ -54,12 +56,12 @@ const Projects: React.FC = () => {
             type: <p>OpenSource</p>,
             typeColor: "border-purple-400 text-purple-400 px-1 rounded-lg",
             tags: [
-                <Flutter key="flutter2" width="27px" height="27px" color="text-primary fill-current" />,
-                <ReactIco key="react1" width="30px" height="30px" color="text-primary fill-current" />,
-                <Typescript key="typescript1" width="27px" height="27px" color="text-primary fill-current" />,
-                <Github key="github2" width="30px" height="30px" color="text-primary fill-current" />,
-                <Photoshop key="photoshop2" width="27px" height="27px" color="text-primary fill-current" />,
-                <DockerIco key="docker2" width="33px" height="33px" color="text-primary fill-current" />
+                <SiFlutter key="flutter2" className="w-5 h-5 text-purple-400" />,
+                <SiReact key="react1" className="w-5 h-5 text-purple-400" />,
+                <SiTypescript key="typescript1" className="w-5 h-5 text-purple-400" />,
+                <SiGithub key="github2" className="w-5 h-5 text-purple-400" />,
+                <SiAdobephotoshop key="photoshop2" className="w-5 h-5 text-purple-400" />,
+                <SiDocker key="docker2" className="w-5 h-5 text-purple-400" />
             ]
         },
         {
@@ -69,11 +71,11 @@ const Projects: React.FC = () => {
             type: <p>Service</p>,
             typeColor: "border-green-400 text-green-400 px-1 rounded-lg",
             tags: [
-                <Flutter key="flutter3" width="27px" height="27px" color="text-primary fill-current" />,
-                <Firebase key="firebase3" width="30px" height="30px" color="text-primary fill-current" />,
-                <Figma key="figma1" width="30px" height="30px" color="text-primary fill-current" />,
-                <Github key="github3" width="30px" height="30px" color="text-primary fill-current" />,
-                <Photoshop key="photoshop2" width="27px" height="27px" color="text-primary fill-current" />
+                <SiFlutter key="flutter3" className="w-5 h-5 text-green-400" />,
+                <SiFirebase key="firebase3" className="w-5 h-5 text-green-400" />,
+                <SiFigma key="figma1" className="w-5 h-5 text-green-400" />,
+                <SiGithub key="github3" className="w-5 h-5 text-green-400" />,
+                <SiAdobephotoshop key="photoshop2" className="w-5 h-5 text-green-400" />
             ]
         },
     ]
@@ -88,11 +90,11 @@ const Projects: React.FC = () => {
             type: <p>Abandonné</p>,
             typeColor: "border-red-400 text-red-400 px-1 rounded-lg",
             tags: [
-                <ReactIco key="react1" width="30px" height="30px" color="text-primary fill-current" />,
-                <CssIco key="css1" width="28px" height="28px" color="text-primary fill-current" />,
-                <Github key="github4" width="30px" height="30px" color="text-primary fill-current" />,
-                <Figma key="figma2" width="30px" height="30px" color="text-primary fill-current" />,
-                <Photoshop key="photoshop3" width="27px" height="27px" color="text-primary fill-current" />
+                <SiReact key="react1" className="w-5 h-5 text-red-400" />,
+                <SiCss3 key="css1" className="w-5 h-5 text-red-400" />,
+                <SiGithub key="github4" className="w-5 h-5 text-red-400" />,
+                <SiFigma key="figma2" className="w-5 h-5 text-red-400" />,
+                <SiAdobephotoshop key="photoshop3" className="w-5 h-5 text-red-400" />
             ]
         },
         {
@@ -102,13 +104,13 @@ const Projects: React.FC = () => {
             type: <p>Commercial</p>,
             typeColor: "border-orange-400 text-orange-400 px-1 rounded-lg",
             tags: [
-                <ReactIco key="react3" width="30px" height="30px" color="text-primary fill-current" />,
-                <Vite key="vite2" width="29px" height="29px" color="text-primary fill-current" />,
-                <Tailwind key="tailwind2" width="30px" height="30px" color="text-primary fill-current" />,
-                <Typescript key="typescript2" width="27px" height="27px" color="text-primary fill-current" />,
-                <Figma key="figma4" width="30px" height="30px" color="text-primary fill-current" />,
-                <Github key="github6" width="30px" height="30px" color="text-primary fill-current" />,
-                <Photoshop key="photoshop5" width="27px" height="27px" color="text-primary fill-current" />
+                <SiReact key="react3" className="w-5 h-5 text-orange-400" />,
+                <SiVite key="vite2" className="w-5 h-5 text-orange-400" />,
+                <SiTailwindcss key="tailwind2" className="w-5 h-5 text-orange-400" />,
+                <SiTypescript key="typescript2" className="w-5 h-5 text-orange-400" />,
+                <SiFigma key="figma4" className="w-5 h-5 text-orange-400" />,
+                <SiGithub key="github6" className="w-5 h-5 text-orange-400" />,
+                <SiAdobephotoshop key="photoshop5" className="w-5 h-5 text-orange-400" />
             ]
         },
         {
@@ -118,13 +120,13 @@ const Projects: React.FC = () => {
             type: <p>Prestation</p>,
             typeColor: "border-blue-400 text-blue-400 px-1 rounded-lg",
             tags: [
-                <ReactIco key="react2" width="30px" height="30px" color="text-primary fill-current" />,
-                <NextIco key="next1" width="30px" height="30px" color="text-primary fill-current" />,
-                <Tailwind key="tailwind1" width="30px" height="30px" color="text-primary fill-current" />,
-                <Typescript key="typescript1" width="27px" height="27px" color="text-primary fill-current" />,
-                <Figma key="figma3" width="30px" height="30px" color="text-primary fill-current" />,
-                <Github key="github5" width="30px" height="30px" color="text-primary fill-current" />,
-                <Photoshop key="photoshop4" width="27px" height="27px" color="text-primary fill-current" />,
+                <SiReact key="react2" className="w-5 h-5 text-blue-400" />,
+                <SiNextdotjs key="next1" className="w-5 h-5 text-blue-400" />,
+                <SiTailwindcss key="tailwind1" className="w-5 h-5 text-blue-400" />,
+                <SiTypescript key="typescript1" className="w-5 h-5 text-blue-400" />,
+                <SiFigma key="figma3" className="w-5 h-5 text-blue-400" />,
+                <SiGithub key="github5" className="w-5 h-5 text-blue-400" />,
+                <SiAdobephotoshop key="photoshop4" className="w-5 h-5 text-blue-400" />,
             ]
         },
         {
@@ -134,15 +136,15 @@ const Projects: React.FC = () => {
             type: <p>Prestation</p>,
             typeColor: "border-blue-400 text-blue-400 px-1 rounded-lg",
             tags: [
-                <ReactIco key="react2" width="30px" height="30px" color="text-primary fill-current" />,
-                <Flutter key="flutter4" width="27px" height="27px" color="text-primary fill-current" />,
-                <Firebase key="firebase4" width="30px" height="30px" color="text-primary fill-current" />,
-                <Vite key="vite1" width="29px" height="29px" color="text-primary fill-current" />,
-                <Tailwind key="tailwind1" width="30px" height="30px" color="text-primary fill-current" />,
-                <Typescript key="typescript1" width="27px" height="27px" color="text-primary fill-current" />,
-                <Figma key="figma3" width="30px" height="30px" color="text-primary fill-current" />,
-                <Github key="github5" width="30px" height="30px" color="text-primary fill-current" />,
-                <Photoshop key="photoshop4" width="27px" height="27px" color="text-primary fill-current" />
+                <SiReact key="react2" className="w-5 h-5 text-blue-400" />,
+                <SiFlutter key="flutter4" className="w-5 h-5 text-blue-400" />,
+                <SiFirebase key="firebase4" className="w-5 h-5 text-blue-400" />,
+                <SiVite key="vite1" className="w-5 h-5 text-blue-400" />,
+                <SiTailwindcss key="tailwind1" className="w-5 h-5 text-blue-400" />,
+                <SiTypescript key="typescript1" className="w-5 h-5 text-blue-400" />,
+                <SiFigma key="figma3" className="w-5 h-5 text-blue-400" />,
+                <SiGithub key="github5" className="w-5 h-5 text-blue-400" />,
+                <SiAdobephotoshop key="photoshop4" className="w-5 h-5 text-blue-400" />
             ]
         },
         {
@@ -152,16 +154,15 @@ const Projects: React.FC = () => {
             type: <p>Commercial</p>,
             typeColor: "border-orange-400 text-orange-400 px-1 rounded-lg",
             tags: [
-                <ReactIco key="react4" width="30px" height="30px" color="text-primary fill-current" />,
-                <NextIco key="next1" width="30px" height="30px" color="text-primary fill-current" />,
-                <Tailwind key="tailwind3" width="30px" height="30px" color="text-primary fill-current" />,
-                <Typescript key="typescript3" width="27px" height="27px" color="text-primary fill-current" />,
-                <Figma key="figma5" width="30px" height="30px" color="text-primary fill-current" />,
-                <Github key="github7" width="30px" height="30px" color="text-primary fill-current" />,
-                <Photoshop key="photoshop6" width="27px" height="27px" color="text-primary fill-current" />
+                <SiReact key="react4" className="w-5 h-5 text-orange-400" />,
+                <SiNextdotjs key="next1" className="w-5 h-5 text-orange-400" />,
+                <SiTailwindcss key="tailwind3" className="w-5 h-5 text-orange-400" />,
+                <SiTypescript key="typescript3" className="w-5 h-5 text-orange-400" />,
+                <SiFigma key="figma5" className="w-5 h-5 text-orange-400" />,
+                <SiGithub key="github7" className="w-5 h-5 text-orange-400" />,
+                <SiAdobephotoshop key="photoshop6" className="w-5 h-5 text-orange-400" />
             ]
         },
-
     ]
 
     /////////////////////////////////////////////////////////////////

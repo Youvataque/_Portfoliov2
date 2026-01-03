@@ -33,7 +33,7 @@
 
   @keyframes grid {
     0% {
-      transform: translateY(-10%);
+      transform: translateY(-300px);
     }
 
     100% {
