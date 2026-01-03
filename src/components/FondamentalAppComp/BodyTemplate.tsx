@@ -10,8 +10,8 @@ interface BodyProps {
 // composant structurant les pages
 const BodyTemplate: React.FC<BodyProps> = ({ children }) => {
     return (
-        <main className="bg-background flex flex-col items-center w-screen">
-            <RetroGrid className="fixed" />
+        <main className="flex flex-col items-center w-full">
+            <RetroGrid className="fixed z-0" />
             <div className="relative z-10">{children}</div>
         </main>
     );

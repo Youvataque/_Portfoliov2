@@ -1,6 +1,6 @@
 "use client";
 /* eslint-disable */
-import BodyTemplate from "@/components/FondamentalAppComp/BodyTemplate"; 
+import BodyTemplate from "@/components/FondamentalAppComp/BodyTemplate";
 import Title from "@/components/ViewTemplate/Title";
 import { MyBentoGrid } from "@/components/ViewTemplate/MyBentoGrid";
 import IconCloud from "@/components/magicui/icon-cloud";
@@ -35,11 +35,11 @@ export default function Home() {
       "tailwindcss",
       "docker"
     ],
-   };
+  };
 
   /////////////////////////////////////////////////////////////////
   // text custom pour la description
-  function textCustom(){
+  function textCustom() {
     return <h1 className="text-2xl max-xl:text-lg max-md:text-md text-primary pt-4">
       <b>Developpeur Full-stack. </b>Passionné par l'informatique, mes technologies de prédilection sont Flutter pour le mobile et React.js pour le web (toujours avec tailwind).
     </h1>
@@ -47,18 +47,18 @@ export default function Home() {
 
   /////////////////////////////////////////////////////////////////
   // header du composant avec pp et infos
-  function header(){
+  function header() {
     return <div className="flex flex-row justify-between items-center  min-h-screen">
       <div className="flex flex-col w-full items-start">
         <SousTitle text="Bienvenue ! Je suis -" style="text-secondary" />
         <Title text="Yannis Seguin" style="text-secondary" />
-          <SocialMedia/>
+        <SocialMedia />
         <div className="max-md:hidden">{textCustom()}</div>
       </div>
       <div className="flex flex-col w-full max-md:w-auto items-end">
-      <div className="relative w-96 h-96 max-2xl:w-80 max-2xl:h-80 max-xl:w-64 max-xl:h-64 max-md:w-44 max-md:h-44">
-        <Image fill src="/Img/profilPic.webp" alt="Yannis Seguin"/>
-      </div>
+        <div className="relative w-96 h-96 max-2xl:w-80 max-2xl:h-80 max-xl:w-64 max-xl:h-64 max-md:w-44 max-md:h-44">
+          <Image fill src="/Img/profilPic.webp" alt="Yannis Seguin" />
+        </div>
       </div>
     </div>
   }
@@ -91,11 +91,11 @@ export default function Home() {
   function infoZone() {
     return <div className="min-h-screen flex items-center justify-center flex-col">
       <div className="w-[50vw] max-2xl:w-[70vw] max-md:w-[95vw] flex items-center justify-start pb-4">
-        <SousTitle text="Quelques informations :" style="text-secondary"/>
+        <SousTitle text="Quelques informations :" style="text-secondary" />
       </div>
       <div className="flex flex-row max-lg:flex-col-reverse justify-between max-lg:justify-center items-center w-[50vw] max-2xl:w-[70vw] max-md:w-[95vw]">
         {iconCloud()}
-        <MyAnimatedList/>
+        <MyAnimatedList />
       </div>
     </div>
   }
@@ -109,8 +109,8 @@ export default function Home() {
         <div className="md:hidden w-[95vw]">{textCustom()}</div>
         {projectZone()}
         {infoZone()}
-        <Footer/>
-        <div className="pb-4"/>
+        <Footer />
+        <div className="pb-4" />
       </div>
     </BodyTemplate>
   );

@@ -1,8 +1,77 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap');
+@import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@plugin "tailwindcss-animate";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #11131F;
+  --secondary: #9EB1FF;
+}
+
+@theme {
+  --color-background: #11131F;
+  --color-foreground: #141726;
+  --color-primary: #D6E1FF;
+  --color-secondary: #9EB1FF;
+  --color-borderColor: #304384;
+  --color-elementColor: #182449;
+  --color-accentColor: #1d2e62;
+
+  --font-size-md: 16px;
+  --font-size-3.5xl: 35px;
+  --font-size-8xl: 80px;
+
+  --breakpoint-2xl: 2000px;
+
+  --border-width-0\.5: 0.1px;
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-grid: grid 10s linear infinite;
+
+  @keyframes grid {
+    0% {
+      transform: translateY(-10%);
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+
+    to {
+      height: 0;
+    }
+  }
+}
+
+@layer base {
+
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
 
 * {
   font-family: 'Lexend', sans-serif;

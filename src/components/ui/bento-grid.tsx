@@ -1,4 +1,6 @@
 import { cn } from "@/lib/utils";
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 
 export const BentoGrid = ({
   className,
@@ -10,7 +12,7 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        "grid lg:auto-rows-[18rem] grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto ",
+        "grid lg:auto-rows-[22rem] grid-cols-1 lg:grid-cols-3 gap-6 max-w-7xl mx-auto",
         className
       )}
     >
@@ -35,25 +37,57 @@ export const BentoGridItem = ({
   link?: string;
 }) => {
   return (
-    <a
+    <div
       className={cn(
-        "row-span-1 rounded-xl group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] bg-white justify-between flex flex-col space-y-4 border border-solid border-primary group hover:border-secondary",
+        "row-span-1 group/bento relative rounded-3xl justify-between flex flex-col space-y-0 h-full",
+        "bg-white/5 dark:bg-black/20 backdrop-blur-md border border-white/10",
+        "hover:bg-white/10 hover:border-white/20 transition-all duration-300 ease-out",
+        "overflow-hidden shadow-2xl shadow-black/20",
         className
       )}
-      href={link}
-      target="_blank"
     >
-      {header}
-      <div className="group-hover/bento:translate-x-2 transition duration-200">
-        {icon}
-        <h2 className="font-sans font-bold text-primary group-hover:text-secondary mb-2 mt-2">
-          {title}
-        </h2>
-        <p className="font-sans font-normal text-primary group-hover:text-secondary text-xs line-clamp-3">
-          {description}
-        </p>
+      {/* Background Gradient Effect */}
+      <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover/bento:opacity-100 transition-opacity duration-500 pointer-events-none" />
+
+      {/* Header / Media - Goes Edge to Edge - Proportional Height on Desktop, Fixed on Mobile */}
+      <div className="w-full h-32 lg:h-[60%] transition-transform duration-300 group-hover/bento:scale-[1.02]">
+        {header}
       </div>
-    </a>
+
+      {/* Content - Has Padding */}
+      <div className="p-6 flex flex-col justify-between flex-grow z-10 group-hover/bento:translate-x-1 transition duration-200">
+        <div>
+          <div className="flex items-center justify-between mb-3">
+            {icon}
+            {link && (
+              <Link
+                href={link}
+                target="_blank"
+                className="opacity-0 group-hover/bento:opacity-100 transition-opacity duration-300 p-2 rounded-full bg-white/10 hover:bg-white/20"
+              >
+                <ArrowUpRight className="w-4 h-4 text-white" />
+              </Link>
+            )}
+          </div>
+
+          <h2 className="font-sans font-bold text-xl text-white mb-2">
+            {title}
+          </h2>
+          <p className="font-sans font-medium text-neutral-300 text-sm leading-relaxed line-clamp-3">
+            {description}
+          </p>
+        </div>
+      </div>
+
+      {/* Clickable Overlay */}
+      {link && (
+        <Link
+          href={link}
+          target="_blank"
+          className="absolute inset-0 z-20"
+          aria-label={`View project ${title}`}
+        />
+      )}
+    </div>
   );
 };
-
