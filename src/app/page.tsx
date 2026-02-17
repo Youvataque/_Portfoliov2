@@ -41,7 +41,7 @@ export default function Home() {
   // text custom pour la description
   function textCustom() {
     return <h1 className="text-2xl max-xl:text-lg max-md:text-md text-primary pt-4">
-      <b>Developpeur Full-stack. </b>Passionné par l'informatique, mes technologies de prédilection sont Flutter pour le mobile et React.js pour le web (toujours avec tailwind).
+      <b>Product Engineer. </b>Je conçois et déploie des architectures web & mobile complètes. Mon expertise : transformer des besoins métier en produits robustes et scalables (Flutter & React).
     </h1>
   }
 
