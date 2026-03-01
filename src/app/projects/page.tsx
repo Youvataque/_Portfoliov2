@@ -67,7 +67,7 @@ const Projects: React.FC = () => {
         {
             title: "NewBat : l'informatique du bâtiment",
             description: "Entreprise du batiment ? Vous souhaitez passer au numérique ? Avec NewBat entamez votre transition ! Gérez vos entretiens, vos chantiers ainsi que vos devis avec une simplicité encore inégalé.",
-            href: "https://www.youtube.com/watch?v=GpcRevrvhY8",
+            href: "https://www.youtube.com/watch?v=z0gpEHgiw-M",
             type: <p>Service</p>,
             typeColor: "border-green-400 text-green-400 px-1 rounded-lg",
             tags: [
