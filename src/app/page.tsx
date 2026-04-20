@@ -40,7 +40,7 @@ export default function Home() {
   /////////////////////////////////////////////////////////////////
   // text custom pour la description
   function textCustom() {
-    return <h1 className="text-2xl max-xl:text-lg max-md:text-md text-primary pt-4">
+    return <h1 className="text-2xl max-xl:text-lg max-md:text-md text-primary">
       <b>Product Engineer. </b>Je conçois et déploie des architectures web & mobile complètes. Mon expertise : transformer des besoins métier en produits robustes et scalables (Flutter & React).
     </h1>
   }
@@ -48,18 +48,21 @@ export default function Home() {
   /////////////////////////////////////////////////////////////////
   // header du composant avec pp et infos
   function header() {
-    return <div className="flex flex-row justify-between items-center  min-h-screen">
-      <div className="flex flex-col w-full items-start">
-        <SousTitle text="Bienvenue ! Je suis -" style="text-secondary" />
-        <Title text="Yannis Seguin" style="text-secondary" />
-        <SocialMedia />
-        <div className="max-md:hidden">{textCustom()}</div>
-      </div>
-      <div className="flex flex-col w-full max-md:w-auto items-end">
-        <div className="relative w-96 h-96 max-2xl:w-80 max-2xl:h-80 max-xl:w-64 max-xl:h-64 max-md:w-44 max-md:h-44">
-          <Image fill src="/Img/profilPic.webp" alt="Yannis Seguin" />
+    return <div className="flex flex-col justify-center items-center max-md:min-h-screen">
+      <div className="flex flex-row justify-between items-center md:min-h-screen">
+        <div className="flex flex-col w-full items-start">
+          <SousTitle text="Bienvenue ! Je suis -" style="text-secondary" />
+          <Title text="Yannis Seguin" style="text-secondary" />
+          <SocialMedia />
+          <div className="max-md:hidden">{textCustom()}</div>
+        </div>
+        <div className="flex flex-col w-full max-md:w-auto items-end">
+          <div className="relative w-96 h-96 max-2xl:w-80 max-2xl:h-80 max-xl:w-64 max-xl:h-64 max-md:w-44 max-md:h-44">
+            <Image fill src="/Img/profilPic.webp" alt="Yannis Seguin" />
+          </div>
         </div>
       </div>
+      <div className="md:hidden w-[95vw] pt-2">{textCustom()}</div>
     </div>
   }
 
@@ -106,7 +109,6 @@ export default function Home() {
     <BodyTemplate>
       <div className="flex flex-col items-center w-[50vw] max-2xl:w-[70vw] max-md:w-[95vw]">
         {header()}
-        <div className="md:hidden w-[95vw]">{textCustom()}</div>
         {projectZone()}
         {infoZone()}
         <Footer />
