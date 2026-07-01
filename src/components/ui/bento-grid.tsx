@@ -41,7 +41,7 @@ export const BentoGridItem = ({
       className={cn(
         "row-span-1 group/bento relative rounded-3xl justify-between flex flex-col space-y-0 h-full",
         "bg-white/5 dark:bg-black/20 backdrop-blur-md border border-white/10",
-        "hover:bg-white/10 hover:border-white/20 transition-all duration-300 ease-out",
+        "transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-white/10 hover:border-white/25",
         "overflow-hidden shadow-2xl shadow-black/20",
         className
       )}
@@ -62,7 +62,6 @@ export const BentoGridItem = ({
             {link && (
               <Link
                 href={link}
-                target="_blank"
                 className="opacity-0 group-hover/bento:opacity-100 transition-opacity duration-300 p-2 rounded-full bg-white/10 hover:bg-white/20"
               >
                 <ArrowUpRight className="w-4 h-4 text-white" />
@@ -83,7 +82,6 @@ export const BentoGridItem = ({
       {link && (
         <Link
           href={link}
-          target="_blank"
           className="absolute inset-0 z-20"
           aria-label={`View project ${title}`}
         />

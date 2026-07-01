@@ -3,8 +3,7 @@
 import BodyTemplate from "@/components/FondamentalAppComp/BodyTemplate";
 import Title from "@/components/ViewTemplate/Title";
 import { MyBentoGrid } from "@/components/ViewTemplate/MyBentoGrid";
-import IconCloud from "@/components/magicui/icon-cloud";
-import { MyAnimatedList } from "@/components/ViewTemplate/MyAnimatedList";
+import { TechStack } from "@/components/ViewTemplate/TechStack";
 import Footer from "@/components/FondamentalAppComp/Footer";
 import SousTitle from "@/components/ViewTemplate/SousTitle";
 import SocialMedia from "@/components/ViewTemplate/SocialMedia";
@@ -12,35 +11,9 @@ import Image from "next/image";
 export default function Home() {
 
   /////////////////////////////////////////////////////////////////
-  // icons des technologies utilisés pour le dev web & mobile
-  const cloudIconsData = {
-    iconSlugs: [
-      "typescript",
-      "javascript",
-      "dart",
-      "react",
-      "flutter",
-      "android",
-      "ios",
-      "pixelmator",
-      "html5",
-      "css3",
-      "firebase",
-      "vercel",
-      "git",
-      "github",
-      "visualstudiocode",
-      "figma",
-      "nextjs",
-      "tailwindcss",
-      "docker"
-    ],
-  };
-
-  /////////////////////////////////////////////////////////////////
   // text custom pour la description
   function textCustom() {
-    return <h1 className="text-2xl max-xl:text-lg max-md:text-md text-primary">
+    return <h1 className="text-2xl max-xl:text-lg max-md:text-md text-primary pt-4">
       <b>Product Engineer. </b>Je conçois et déploie des architectures web & mobile complètes. Mon expertise : transformer des besoins métier en produits robustes et scalables (Flutter & React).
     </h1>
   }
@@ -53,8 +26,8 @@ export default function Home() {
         <div className="flex flex-col w-full items-start">
           <SousTitle text="Bienvenue ! Je suis -" style="text-secondary" />
           <Title text="Yannis Seguin" style="text-secondary" />
-          <SocialMedia />
           <div className="max-md:hidden">{textCustom()}</div>
+          <SocialMedia />
         </div>
         <div className="flex flex-col w-full max-md:w-auto items-end">
           <div className="relative w-96 h-96 max-2xl:w-80 max-2xl:h-80 max-xl:w-64 max-xl:h-64 max-md:w-44 max-md:h-44">
@@ -64,18 +37,6 @@ export default function Home() {
       </div>
       <div className="md:hidden w-[95vw] pt-2">{textCustom()}</div>
     </div>
-  }
-
-  /////////////////////////////////////////////////////////////////
-  // composant d'icon animé
-  function iconCloud() {
-    return (
-      <div className="relative w-[50vw] max-2xl:w-[70vw] max-md:w-[95vw] flex max-lg:justify-center items-center bg-transparent">
-        <div className="w-96 max-2xl:w-80 max-md:w-64 pb-12 max-2xl:pb-10 max-lg:pb-0">
-          <IconCloud iconSlugs={cloudIconsData.iconSlugs} />
-        </div>
-      </div>
-    );
   }
 
   /////////////////////////////////////////////////////////////////
@@ -92,14 +53,11 @@ export default function Home() {
   /////////////////////////////////////////////////////////////////
   // section affichant toutes les informations de l'accueil
   function infoZone() {
-    return <div className="min-h-screen flex items-center justify-center flex-col">
-      <div className="w-[50vw] max-2xl:w-[70vw] max-md:w-[95vw] flex items-center justify-start pb-4">
-        <SousTitle text="Quelques informations :" style="text-secondary" />
+    return <div className="min-h-screen flex items-center justify-center flex-col w-[50vw] max-2xl:w-[70vw] max-md:w-[95vw]">
+      <div className="w-full flex items-center justify-start pb-8">
+        <SousTitle text="Mes technos :" style="text-secondary" />
       </div>
-      <div className="flex flex-row max-lg:flex-col-reverse justify-between max-lg:justify-center items-center w-[50vw] max-2xl:w-[70vw] max-md:w-[95vw]">
-        {iconCloud()}
-        <MyAnimatedList />
-      </div>
+      <TechStack />
     </div>
   }
 

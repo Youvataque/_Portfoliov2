@@ -16,6 +16,7 @@ import BodyTemplate from "@/components/FondamentalAppComp/BodyTemplate";
 import Footer from "@/components/FondamentalAppComp/Footer";
 import MainText from "@/components/ViewTemplate/MainText";
 import ProjectCard from "@/components/ViewTemplate/ProjectCard";
+import NeekoHeroCard from "@/components/ViewTemplate/NeekoHeroCard";
 import SousTitle from "@/components/ViewTemplate/SousTitle";
 import Title from "@/components/ViewTemplate/Title";
 
@@ -24,19 +25,6 @@ const Projects: React.FC = () => {
     /////////////////////////////////////////////////////////////////
     // donnée des projets mobile (application)
     const cardMobileData = [
-        {
-            title: "CoockLeen",
-            description: "Vous cherchez une application de cuisine collaborative ? L'esprit familial vous tient à cœur ? CookLeen est LA solution ! Cette application sert de premier projet Flutter.",
-            href: "https://github.com/Youvataque/Coockleen-Flutter",
-            type: <p>Abandonné</p>,
-            typeColor: "border-red-400 text-red-400 px-1 rounded-lg",
-            tags: [
-                <SiFlutter key="flutter1" className="w-5 h-5 text-red-400" />,
-                <SiFirebase key="firebase1" className="w-5 h-5 text-red-400" />,
-                <SiGithub key="github1" className="w-5 h-5 text-red-400" />,
-                <SiAdobephotoshop key="photoshop1" className="w-5 h-5 text-red-400" />
-            ]
-        },
         {
             title: "Montpellier Transport",
             description: "Vous en avez assez d'utiliser une application mal conçue au quotidien ? Vous souhaitez profiter d'une ergonomie et d'un design adaptés aux goûts actuels ? Choisissez Montpellier Transport ! Attention est en cours de développement !",
@@ -84,17 +72,19 @@ const Projects: React.FC = () => {
     // donnée des projets web (site)
     const cardDesktopData = [
         {
-            title: "_Portfolio",
-            description: "Le portfolio est un essentiel pour tout développeur. Désireux de présenter mes réalisations et de mettre en avant mes compétences, voici le mien. Il sert également de premier projet en React !",
-            href: "https://github.com/Youvataque/_Portfolio",
-            type: <p>Abandonné</p>,
-            typeColor: "border-red-400 text-red-400 px-1 rounded-lg",
+            title: "_PortfolioV2",
+            description: "Le portfolio étant la devanture de tout développeur, voici une version revisitée du mien. Il utilise des technologies modernes, le code est bien plus propre et le design saura se faire apprécier.",
+            href: "https://github.com/Youvataque/_Portfoliov2",
+            type: <p>Commercial</p>,
+            typeColor: "border-orange-400 text-orange-400 px-1 rounded-lg",
             tags: [
-                <SiReact key="react1" className="w-5 h-5 text-red-400" />,
-                <SiCss3 key="css1" className="w-5 h-5 text-red-400" />,
-                <SiGithub key="github4" className="w-5 h-5 text-red-400" />,
-                <SiFigma key="figma2" className="w-5 h-5 text-red-400" />,
-                <SiAdobephotoshop key="photoshop3" className="w-5 h-5 text-red-400" />
+                <SiReact key="react4" className="w-5 h-5 text-orange-400" />,
+                <SiNextdotjs key="next1" className="w-5 h-5 text-orange-400" />,
+                <SiTailwindcss key="tailwind3" className="w-5 h-5 text-orange-400" />,
+                <SiTypescript key="typescript3" className="w-5 h-5 text-orange-400" />,
+                <SiFigma key="figma5" className="w-5 h-5 text-orange-400" />,
+                <SiGithub key="github7" className="w-5 h-5 text-orange-400" />,
+                <SiAdobephotoshop key="photoshop6" className="w-5 h-5 text-orange-400" />
             ]
         },
         {
@@ -147,22 +137,7 @@ const Projects: React.FC = () => {
                 <SiAdobephotoshop key="photoshop4" className="w-5 h-5 text-blue-400" />
             ]
         },
-        {
-            title: "_PortfolioV2",
-            description: "Le portfolio étant la devanture de tout développeur, voici une version revisitée du mien. Il utilise des technologies modernes, le code est bien plus propre et le design saura se faire apprécier.",
-            href: "https://github.com/Youvataque/_Portfoliov2",
-            type: <p>Commercial</p>,
-            typeColor: "border-orange-400 text-orange-400 px-1 rounded-lg",
-            tags: [
-                <SiReact key="react4" className="w-5 h-5 text-orange-400" />,
-                <SiNextdotjs key="next1" className="w-5 h-5 text-orange-400" />,
-                <SiTailwindcss key="tailwind3" className="w-5 h-5 text-orange-400" />,
-                <SiTypescript key="typescript3" className="w-5 h-5 text-orange-400" />,
-                <SiFigma key="figma5" className="w-5 h-5 text-orange-400" />,
-                <SiGithub key="github7" className="w-5 h-5 text-orange-400" />,
-                <SiAdobephotoshop key="photoshop6" className="w-5 h-5 text-orange-400" />
-            ]
-        },
+
     ]
 
     /////////////////////////////////////////////////////////////////
@@ -180,7 +155,7 @@ const Projects: React.FC = () => {
     // zone des projets mobile
     function cardMobileZone() {
         return (
-            <div className="flex flex-col w-full items-start max-md:items-center">
+            <div id="mobile" className="scroll-mt-24 flex flex-col w-full items-start max-md:items-center">
                 <SousTitle text="Projets mobile :" style="text-secondary pb-8" />
                 <div className="flex flex-wrap justify-center items-center w-full">
                     {cardMobileData.reverse().map((card, index) => (
@@ -203,7 +178,7 @@ const Projects: React.FC = () => {
     // zone des projets web
     function cardDesktopZone() {
         return (
-            <div className="flex flex-col w-full items-start max-md:items-center mt-16">
+            <div id="web" className="scroll-mt-24 flex flex-col w-full items-start max-md:items-center mt-16">
                 <SousTitle text="Projets web :" style="text-secondary pb-8" />
                 <div className="flex flex-wrap justify-center items-center w-full">
                     {cardDesktopData.reverse().map((card, index) => (
@@ -228,7 +203,13 @@ const Projects: React.FC = () => {
         <BodyTemplate>
             <div className="flex flex-col justify-center items-center w-[50vw] max-2xl:w-[80vw] max-md:w-[95vw]">
                 {header()}
-                <div className="min-h-screen flex items-center justify-center flex-col">
+                <div id="phare" className="scroll-mt-24 flex flex-col w-full items-start max-md:items-center pb-24">
+                    <SousTitle text="Projet phare :" style="text-secondary pb-8" />
+                    <div className="flex flex-wrap justify-center items-center w-full">
+                        <NeekoHeroCard />
+                    </div>
+                </div>
+                <div className="w-full min-h-screen flex items-center justify-center flex-col">
                     {cardMobileZone()}
                     {cardDesktopZone()}
                 </div>

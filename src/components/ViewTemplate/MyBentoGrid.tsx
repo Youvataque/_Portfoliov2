@@ -1,5 +1,6 @@
 import React from "react";
 import { BentoGrid, BentoGridItem } from "../ui/bento-grid";
+import { NeekoBentoItem } from "./NeekoBentoItem";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
@@ -8,6 +9,7 @@ import Image from "next/image";
 export function MyBentoGrid() {
   return (
     <BentoGrid className="w-[50vw] max-2xl:w-[70vw] max-md:w-[85vw] mx-auto lg:auto-rows-[20rem]">
+      <NeekoBentoItem />
       {items.map((item, i) => (
         <BentoGridItem
           key={i}
@@ -42,7 +44,7 @@ const items = [
     </div>,
     className: "lg:col-span-2",
     icon: pastille("openSource", "bg-transparent border-purple-400 text-purple-400"),
-    link: "https://github.com/Youvataque/HomeFlix-yggpowered"
+    link: "/projects#mobile"
   },
   {
     title: "Épona & Vous",
@@ -54,7 +56,7 @@ const items = [
     </div>,
     className: "lg:col-span-1",
     icon: pastille("Prestation", "bg-transparent text-blue-400 border-blue-400"),
-    link: "https://epona-et-vous.fr/"
+    link: "/projects#web"
   },
   {
     title: "NewBat",
@@ -66,7 +68,7 @@ const items = [
     </div>,
     className: "lg:col-span-1",
     icon: pastille("Service", "bg-transparent text-green-400 border-green-400"),
-    link: "https://www.youtube.com/watch?v=z0gpEHgiw-M"
+    link: "/projects#mobile"
   },
   {
     title: "SolsEnergiesBains",
@@ -78,7 +80,7 @@ const items = [
     </div>,
     className: "lg:col-span-2",
     icon: pastille("Prestation", "bg-transparent text-blue-400 border-blue-400"),
-    link: "https://www.solsenergiesbains.com"
+    link: "/projects#web"
   },
 
 ];
