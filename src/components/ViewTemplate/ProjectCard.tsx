@@ -3,13 +3,14 @@ import React from "react";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Tag, { TagColor } from "./Tag";
 
 interface ProjectCardProps {
   title: string;
   description: string;
   href: string;
   type: JSX.Element;
-  typeColor: string;
+  typeColor: TagColor;
   tags: JSX.Element[];
 }
 
@@ -38,7 +39,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, href, tag
 
       <p className="relative z-10 mt-2 text-sm text-primary/85 leading-relaxed">{description}</p>
 
-      <span className={cn("relative z-10 text-sm border w-min mt-2", typeColor)}>{type}</span>
+      <div className="relative z-10 mt-2">
+        <Tag color={typeColor}>{type}</Tag>
+      </div>
 
       <div className="flex-grow" />
 

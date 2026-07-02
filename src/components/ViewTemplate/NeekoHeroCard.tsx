@@ -2,8 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, Sparkles } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Tag from "./Tag";
 import {
   SiFlutter,
   SiDart,
@@ -67,23 +68,13 @@ const layers: Layer[] = [
 ];
 
 /////////////////////////////////////////////////////////////////
-// badge (pastille de statut)
-const Badge: React.FC<{ className: string; children: React.ReactNode }> = ({ className, children }) => (
-  <span className={cn("flex items-center gap-1.5 rounded-full border px-2.5 py-0.5 text-xs font-semibold", className)}>
-    {children}
-  </span>
-);
-
-/////////////////////////////////////////////////////////////////
 // rangée de badges
 const Badges: React.FC = () => (
   <div className="flex flex-wrap items-center gap-2 mb-3">
-    <Badge className="border-secondary/40 bg-secondary/10 text-secondary">
-      <Sparkles className="w-3 h-3" /> Projet phare
-    </Badge>
-    <Badge className="border-amber-400/40 bg-amber-400/10 text-amber-300">Refonte complète</Badge>
-    <Badge className="border-blue-400/40 bg-blue-400/10 text-blue-300">Contract</Badge>
-    <Badge className="border-emerald-400/40 bg-emerald-400/10 text-emerald-300">Longue durée</Badge>
+    <Tag color="secondary">Projet phare</Tag>
+    <Tag color="amber">Refonte complète</Tag>
+    <Tag color="blue">Contract</Tag>
+    <Tag color="emerald">Longue durée</Tag>
   </div>
 );
 

@@ -27,7 +27,7 @@ export default function Home() {
           <SousTitle text="Bienvenue ! Je suis -" style="text-secondary" />
           <Title text="Yannis Seguin" style="text-secondary" />
           <div className="max-md:hidden">{textCustom()}</div>
-          <SocialMedia />
+          <div className="max-md:hidden"><SocialMedia /></div>
         </div>
         <div className="flex flex-col w-full max-md:w-auto items-end">
           <div className="relative w-96 h-96 max-2xl:w-80 max-2xl:h-80 max-xl:w-64 max-xl:h-64 max-md:w-44 max-md:h-44">
@@ -35,7 +35,10 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="md:hidden w-[95vw] pt-2">{textCustom()}</div>
+      <div className="md:hidden w-[95vw] pt-2">
+        {textCustom()}
+        <SocialMedia />
+      </div>
     </div>
   }
 

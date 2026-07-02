@@ -2,8 +2,9 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, Sparkles } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Tag from "./Tag";
 import {
   SiFlutter,
   SiDart,
@@ -55,9 +56,12 @@ export function NeekoBentoItem() {
 
       {/* contenu */}
       <div className="relative z-10 flex flex-col justify-center flex-1 p-8 max-md:p-6">
-        <span className="mb-3 flex w-min items-center gap-1.5 whitespace-nowrap rounded-full border border-secondary/40 bg-secondary/10 px-2.5 py-0.5 text-xs font-semibold text-secondary">
-          <Sparkles className="w-3 h-3" /> Projet phare
-        </span>
+        <div className="mb-3 flex flex-wrap items-center gap-2">
+          <Tag color="secondary">Projet phare</Tag>
+          <Tag color="amber">Refonte complète</Tag>
+          <Tag color="blue">Contract</Tag>
+          <Tag color="emerald">Longue durée</Tag>
+        </div>
 
         <div className="flex items-center justify-between gap-4">
           <h2 className="text-2xl font-bold text-primary group-hover:text-secondary transition-colors duration-300">

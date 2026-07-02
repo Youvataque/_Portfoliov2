@@ -1,7 +1,7 @@
 import React from "react";
 import { BentoGrid, BentoGridItem } from "../ui/bento-grid";
 import { NeekoBentoItem } from "./NeekoBentoItem";
-import { cn } from "@/lib/utils";
+import Tag, { TagColor } from "./Tag";
 import Image from "next/image";
 
 /////////////////////////////////////////////////////////////////
@@ -26,9 +26,9 @@ export function MyBentoGrid() {
 }
 
 /////////////////////////////////////////////////////////////////
-// pastille de type
-function pastille(text: string, color: string) {
-  return <div className={cn("w-min h-7 text-sm px-3 overflow-hidden border border-solid flex items-center justify-center pb-[2px]", color, "rounded-xl")}>{text}</div>
+// pastille de type (tag unifié)
+function pastille(text: string, color: TagColor) {
+  return <Tag color={color}>{text}</Tag>
 }
 
 /////////////////////////////////////////////////////////////////
@@ -43,7 +43,7 @@ const items = [
       </div>
     </div>,
     className: "lg:col-span-2",
-    icon: pastille("openSource", "bg-transparent border-purple-400 text-purple-400"),
+    icon: pastille("openSource", "purple"),
     link: "/projects#mobile"
   },
   {
@@ -55,7 +55,7 @@ const items = [
       </div>
     </div>,
     className: "lg:col-span-1",
-    icon: pastille("Prestation", "bg-transparent text-blue-400 border-blue-400"),
+    icon: pastille("Prestation", "blue"),
     link: "/projects#web"
   },
   {
@@ -67,7 +67,7 @@ const items = [
       </div>
     </div>,
     className: "lg:col-span-1",
-    icon: pastille("Service", "bg-transparent text-green-400 border-green-400"),
+    icon: pastille("Service", "green"),
     link: "/projects#mobile"
   },
   {
@@ -79,7 +79,7 @@ const items = [
       </div>
     </div>,
     className: "lg:col-span-2",
-    icon: pastille("Prestation", "bg-transparent text-blue-400 border-blue-400"),
+    icon: pastille("Prestation", "blue"),
     link: "/projects#web"
   },
 
