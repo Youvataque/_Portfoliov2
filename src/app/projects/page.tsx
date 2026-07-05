@@ -30,7 +30,7 @@ const Projects: React.FC = () => {
             description: "Vous en avez assez d'utiliser une application mal conçue au quotidien ? Vous souhaitez profiter d'une ergonomie et d'un design adaptés aux goûts actuels ? Choisissez Montpellier Transport ! Attention est en cours de développement !",
             href: "https://montpellier-transports.fr/",
             type: <p>Contribution</p>,
-            typeColor: "yellow",
+            typeColor: "yellow" as const,
             tags: [
                 <SiFlutter key="flutter2" className="w-5 h-5 text-yellow-400" />,
                 <SiFirebase key="firebase2" className="w-5 h-5 text-yellow-400" />,
@@ -42,7 +42,7 @@ const Projects: React.FC = () => {
             description: "Mettez vous aussi en place votre propre plateforme vidéo ! Relié à la source de votre choix vous pourrez télécharger, regarder et administrer votre contenue de façon fluide et confortable.",
             href: "https://github.com/Youvataque/HomeFlix-yggpowered",
             type: <p>OpenSource</p>,
-            typeColor: "purple",
+            typeColor: "purple" as const,
             tags: [
                 <SiFlutter key="flutter2" className="w-5 h-5 text-purple-400" />,
                 <SiReact key="react1" className="w-5 h-5 text-purple-400" />,
@@ -57,7 +57,7 @@ const Projects: React.FC = () => {
             description: "Entreprise du batiment ? Vous souhaitez passer au numérique ? Avec NewBat entamez votre transition ! Gérez vos entretiens, vos chantiers ainsi que vos devis avec une simplicité encore inégalé.",
             href: "https://www.youtube.com/watch?v=z0gpEHgiw-M",
             type: <p>Service</p>,
-            typeColor: "green",
+            typeColor: "green" as const,
             tags: [
                 <SiFlutter key="flutter3" className="w-5 h-5 text-green-400" />,
                 <SiFirebase key="firebase3" className="w-5 h-5 text-green-400" />,
@@ -76,7 +76,7 @@ const Projects: React.FC = () => {
             description: "Le portfolio étant la devanture de tout développeur, voici une version revisitée du mien. Il utilise des technologies modernes, le code est bien plus propre et le design saura se faire apprécier.",
             href: "https://github.com/Youvataque/_Portfoliov2",
             type: <p>Commercial</p>,
-            typeColor: "orange",
+            typeColor: "orange" as const,
             tags: [
                 <SiReact key="react4" className="w-5 h-5 text-orange-400" />,
                 <SiNextdotjs key="next1" className="w-5 h-5 text-orange-400" />,
@@ -92,7 +92,7 @@ const Projects: React.FC = () => {
             description: "Site vitrine servant à présenter plus en détail NewBat et son offre. Si vous êtes une entreprise du bâtiment, vous devriez jeter un œil.",
             href: "https://gestionnaireinterventions.web.app/",
             type: <p>Commercial</p>,
-            typeColor: "orange",
+            typeColor: "orange" as const,
             tags: [
                 <SiReact key="react3" className="w-5 h-5 text-orange-400" />,
                 <SiVite key="vite2" className="w-5 h-5 text-orange-400" />,
@@ -108,7 +108,7 @@ const Projects: React.FC = () => {
             description: "Conception et développement sur-mesure pour l'agence Épona & Vous. Ce site vitrine allie élégance et modernité, avec une attention particulière portée à l'expérience utilisateur, aux animations fluides et au référencement naturel (SEO).",
             href: "https://www.epona-et-vous.fr/",
             type: <p>Prestation</p>,
-            typeColor: "blue",
+            typeColor: "blue" as const,
             tags: [
                 <SiReact key="react2" className="w-5 h-5 text-blue-400" />,
                 <SiNextdotjs key="next1" className="w-5 h-5 text-blue-400" />,
@@ -124,7 +124,7 @@ const Projects: React.FC = () => {
             description: "SolsÉnergiesBains est aujourd'hui équipé d'un site internet sur mesure, piloté par une application mobile. Cela leur permet d'avoir toujours un site internet à la page, sans coûts mensuels.",
             href: "https://www.solsenergiesbains.com/",
             type: <p>Prestation</p>,
-            typeColor: "blue",
+            typeColor: "blue" as const,
             tags: [
                 <SiReact key="react2" className="w-5 h-5 text-blue-400" />,
                 <SiFlutter key="flutter4" className="w-5 h-5 text-blue-400" />,
