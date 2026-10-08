@@ -37,7 +37,7 @@ export default function Home() {
             Yannis Seguin
           </motion.h1>
           <motion.p {...fadeUp(0.2)} className="mt-6 max-w-xl text-xl max-xl:text-lg max-md:text-base leading-relaxed text-foreground">
-            <b className="text-primary">Product Engineer. </b>Je conçois et déploie des architectures web & mobile complètes. Mon expertise : transformer des besoins métier en produits robustes et scalables (Flutter & React).
+            <b className="text-primary">Product Engineer. </b>Je conçois et déploie des architectures web & mobile complètes. Mon expertise : transformer des besoins métier en produits robustes et scalables (Flutter & Laravel).
           </motion.p>
         </div>
         <ProfileScene className="w-full max-w-[340px] max-lg:max-w-[280px] max-md:max-w-[240px] shrink-0 max-md:mx-auto" />

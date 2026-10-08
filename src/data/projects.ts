@@ -81,7 +81,7 @@ export const projects: Project[] = [
         cover: "/Img/Neeko/00_cover.jpg",
         summary:
             "Plateforme temps réel qui connecte restaurateurs et extras. À mon arrivée, le MVP affichait des fonctionnalités factices et le back tenait dans un contrôleur de 2500 lignes, sans temps réel ni traitement asynchrone. Je l'ai redressé en production pour un matching géolocalisé fiable, en direct et sans double acceptation.",
-        stack: ["Flutter", "Laravel", "Next.js", "React", "Redis GEO", "H3", "WebSocket", "Stripe", "Coolify"],
+        stack: ["Flutter", "Laravel", "Next.js", "React", "Redis GEO", "H3", "WebSocket", "Stripe", "Docker", "GitHub Actions"],
         hero: {
             title: { before: "Des extras en ", mark: "moins de 2 heures" },
             lead: "La plateforme temps réel qui connecte restaurateurs et extras. Conçue, codée et déployée en solo, de l'app au back.",
@@ -109,7 +109,7 @@ export const projects: Project[] = [
                 kicker: "Le back",
                 body: [
                     "Laravel était déjà là. Changer de back en big bang sur un produit en production était inenvisageable, alors je l'ai gardé et redressé de l'intérieur, domaine par domaine, en m'appuyant sur ce que le framework fournit déjà (Reverb, Horizon, Redis, Passport).",
-                    "Le contrôleur géant a été découpé en services métier injectés par constructeur, les opérations sensibles passent en transaction avec verrou, et les traitements lourds partent en queue. Côté infra, j'ai quitté AWS pour un serveur Hetzner piloté par Coolify.",
+                    "Le contrôleur géant a été découpé en services métier injectés par constructeur, les opérations sensibles passent en transaction avec verrou, et les traitements lourds partent en queue. Côté infra, j'ai quitté AWS pour un serveur Hetzner, avec un vrai CI/CD GitHub Actions qui build les images Docker et les déploie par SSH, sans intervention manuelle.",
                 ],
                 image: { src: "/Img/Neeko/03_back.jpg", alt: "Avant / après du contrôleur de missions" },
             },

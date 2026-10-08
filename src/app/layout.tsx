@@ -8,8 +8,23 @@ import { cn } from "@/lib/utils";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://seguin-dev.com"),
   title: "Seguin - Website",
   description: "Un site internet ? Une application mobile ? Ou bien un projet encore plus fou ? Dans tout les cas je suis la solution !",
+  // image de partage générée aux couleurs du site (photo, intro, technos)
+  openGraph: {
+    title: "Yannis Seguin · Product Engineer",
+    description: "Je conçois et déploie des architectures web & mobile complètes, de l'app au back.",
+    url: "/",
+    siteName: "Seguin-dev",
+    locale: "fr_FR",
+    type: "website",
+    images: [{ url: "/og.png", width: 1200, height: 630, alt: "Yannis Seguin, Product Engineer" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/og.png"],
+  },
 };
 
 export default function RootLayout({
@@ -21,10 +36,6 @@ export default function RootLayout({
     <html lang="fr">
       <head>
         <link rel="icon" href="/favicon.ico" />
-        <meta property="og:title" content="Seguin - Website" />
-        <meta property="og:description" content="Un site internet ? Une application mobile ? Ou bien un projet encore plus fou ? Contactez moi j'ai surement la solution !" />
-        <meta property="og:image" content="/Img/favPres.webp" />
-        <title>Seguin - Website</title>
       </head>
       <body className={cn(inter.className, "bg-background overflow-x-hidden")}>
         <Navbar />
