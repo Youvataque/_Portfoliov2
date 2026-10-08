@@ -15,6 +15,30 @@
   --color-elementColor: var(--color-white);
   --color-accentColor: #B2EFFD;
 
+  /* couleurs d'une page projet : celles du site par défaut, surchargées par .theme-<projet> */
+  --color-project-bg: var(--color-white);
+  --color-project-ink: var(--color-blue-950);
+  --color-project-ink2: var(--color-blue-900);
+  --color-project-accent: #B2EFFD;
+  --color-project-accentSoft: var(--color-sky-100);
+  --color-project-muted: var(--color-slate-500);
+  --color-project-surface: var(--color-slate-50);
+  --color-project-line: var(--color-slate-200);
+  --color-project-brand: var(--color-blue-950);
+  --color-project-markBg: #B2EFFD;
+  --color-project-markText: var(--color-blue-950);
+  --color-project-chipBg: var(--color-blue-950);
+  --color-project-chipText: var(--color-white);
+  --color-project-chipDot: #B2EFFD;
+  --color-project-heroDisc: #B2EFFD;
+  --color-project-ctaBg: var(--color-blue-950);
+  --color-project-ctaText: var(--color-white);
+  --color-project-bezel: var(--color-blue-950);
+
+  --font-heading: 'Lexend', sans-serif;
+
+  --font-sans: 'Lexend', sans-serif;
+
   --font-size-md: 16px;
   --font-size-3.5xl: 35px;
   --font-size-8xl: 80px;
@@ -25,6 +49,13 @@
 
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-flow: flow 1.2s linear infinite;
+
+  @keyframes flow {
+    to {
+      stroke-dashoffset: -32;
+    }
+  }
   @keyframes accordion-down {
     from {
       height: 0;
@@ -75,6 +106,165 @@
   }
 }
 
-* {
-  font-family: 'Lexend', sans-serif;
+/* police du site ; une page projet la remplace via --font-current (variable héritée) */
+@layer base {
+  * {
+    font-family: var(--font-current, 'Lexend', sans-serif);
+  }
+
+  /* les blocs inclinés en perspective (apparition au scroll) débordent tant qu'ils ne sont pas révélés ;
+     sans ça, le navigateur mobile élargit la page pour les afficher */
+  html,
+  body {
+    overflow-x: clip;
+  }
+}
+
+/* DA Neeko : blanc / encre / or, Poppins + JetBrains Mono */
+@theme static {
+  --color-neeko-ink: #151515;
+  --color-neeko-ink2: #232323;
+  --color-neeko-gold: #FFD484;
+  --color-neeko-goldSoft: #FFE6A3;
+  --color-neeko-grey: #696969;
+  --color-neeko-surface: #F6F6F7;
+  --color-neeko-line: #E8E8EE;
+}
+
+.theme-neeko {
+  --color-project-bg: var(--color-white);
+  --color-project-ink: var(--color-neeko-ink);
+  --color-project-ink2: var(--color-neeko-ink2);
+  --color-project-accent: var(--color-neeko-gold);
+  --color-project-accentSoft: var(--color-neeko-goldSoft);
+  --color-project-muted: var(--color-neeko-grey);
+  --color-project-surface: var(--color-neeko-surface);
+  --color-project-line: var(--color-neeko-line);
+  --color-project-brand: var(--color-neeko-ink);
+  --color-project-markBg: var(--color-neeko-gold);
+  --color-project-markText: var(--color-neeko-ink);
+  --color-project-chipBg: var(--color-neeko-ink);
+  --color-project-chipText: var(--color-white);
+  --color-project-chipDot: var(--color-neeko-gold);
+  --color-project-heroDisc: var(--color-neeko-gold);
+  --color-project-ctaBg: var(--color-neeko-gold);
+  --color-project-ctaText: var(--color-neeko-ink);
+  --color-project-bezel: var(--color-neeko-ink);
+  --font-current: var(--font-poppins), sans-serif;
+  --font-heading: var(--font-poppins), sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+}
+
+/* DA Clane : blanc / encre / Coralde / Inbluke, Amiko (titres) + Mukta Mahee */
+@theme static {
+  --color-clane-ink: #141925;
+  --color-clane-coralde: #5D7DB9;
+  --color-clane-inbluke: #2F4A7D;
+  --color-clane-surface: #F3F5F9;
+  --color-clane-line: #E2E6EE;
+  --color-clane-muted: #6E7787;
+}
+
+.theme-clane {
+  --color-project-bg: var(--color-white);
+  --color-project-ink: var(--color-clane-ink);
+  --color-project-ink2: var(--color-clane-inbluke);
+  --color-project-accent: var(--color-clane-coralde);
+  --color-project-accentSoft: var(--color-clane-surface);
+  --color-project-muted: var(--color-clane-muted);
+  --color-project-surface: var(--color-clane-surface);
+  --color-project-line: var(--color-clane-line);
+  --color-project-brand: var(--color-clane-coralde);
+  /* Clane met les mots clés en couleur, sans surlignage */
+  --color-project-markBg: transparent;
+  --color-project-markText: var(--color-clane-coralde);
+  --project-mark-px: 0;
+  --color-project-chipBg: var(--color-clane-inbluke);
+  --color-project-chipText: var(--color-white);
+  --color-project-chipDot: transparent;
+  --project-chip-dot: none;
+  --color-project-heroDisc: var(--color-clane-coralde);
+  --color-project-ctaBg: var(--color-clane-inbluke);
+  --color-project-ctaText: var(--color-white);
+  --color-project-bezel: var(--color-clane-ink);
+  --font-current: var(--font-mukta), sans-serif;
+  --font-heading: var(--font-amiko), sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+}
+/* DA HomeFlix : thème sombre de l'app, accent vert, Manrope */
+@theme static {
+  --color-homeflix-bg: #14181D;
+  --color-homeflix-card: #22282F;
+  --color-homeflix-line: #2F363E;
+  --color-homeflix-accent: #10DFA8;
+  --color-homeflix-text: #EEEEEE;
+  --color-homeflix-muted: #B4B4B4;
+}
+
+.theme-homeflix {
+  --color-project-bg: var(--color-homeflix-bg);
+  --color-project-ink: var(--color-homeflix-text);
+  --color-project-ink2: var(--color-homeflix-text);
+  --color-project-accent: var(--color-homeflix-accent);
+  --color-project-accentSoft: var(--color-homeflix-card);
+  --color-project-muted: var(--color-homeflix-muted);
+  --color-project-surface: var(--color-homeflix-card);
+  --color-project-line: var(--color-homeflix-line);
+  --color-project-brand: var(--color-homeflix-text);
+  /* mots clés en vert, sans surlignage */
+  --color-project-markBg: transparent;
+  --color-project-markText: var(--color-homeflix-accent);
+  --project-mark-px: 0;
+  /* titres en casse normale, comme dans l'app */
+  --project-title-case: none;
+  --color-project-chipBg: var(--color-homeflix-card);
+  --color-project-chipText: var(--color-homeflix-text);
+  --color-project-chipDot: var(--color-homeflix-accent);
+  --color-project-heroDisc: color-mix(in oklab, var(--color-homeflix-accent) 30%, transparent);
+  --color-project-ctaBg: var(--color-homeflix-accent);
+  --color-project-ctaText: var(--color-homeflix-bg);
+  --color-project-bezel: #000000;
+  --font-current: var(--font-manrope), sans-serif;
+  --font-heading: var(--font-manrope), sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+}
+
+/* DA Sols Énergies Bains : crème / marine / bleu de l'app, Inter, mots clés surlignés au feutre bleu pâle */
+@theme static {
+  --color-seb-cream: #FFFDFA;
+  --color-seb-navy: #102E79;
+  --color-seb-ink: #0B1632;
+  --color-seb-app: #1B2CBF;
+  --color-seb-muted: #595959;
+  --color-seb-line: #EBE6DC;
+  --color-seb-highlight: #DFE6FB;
+  --color-seb-surface: #F6F3EE;
+}
+
+.theme-seb {
+  --color-project-bg: var(--color-seb-cream);
+  --color-project-ink: var(--color-seb-ink);
+  --color-project-ink2: var(--color-seb-navy);
+  --color-project-accent: var(--color-seb-app);
+  --color-project-accentSoft: var(--color-seb-highlight);
+  --color-project-muted: var(--color-seb-muted);
+  --color-project-surface: var(--color-seb-surface);
+  --color-project-line: var(--color-seb-line);
+  --color-project-brand: var(--color-seb-ink);
+  --color-project-markBg: transparent;
+  --color-project-markText: var(--color-seb-navy);
+  --project-mark-px: 0.06em;
+  --project-mark-image: linear-gradient(transparent 62%, var(--color-seb-highlight) 62%);
+  --project-title-case: none;
+  --color-project-chipBg: var(--color-seb-navy);
+  --color-project-chipText: var(--color-white);
+  --color-project-chipDot: transparent;
+  --project-chip-dot: none;
+  --color-project-heroDisc: var(--color-seb-app);
+  --color-project-ctaBg: var(--color-seb-app);
+  --color-project-ctaText: var(--color-white);
+  --color-project-bezel: #0B0D12;
+  --font-current: var(--font-inter), sans-serif;
+  --font-heading: var(--font-inter), sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
 }

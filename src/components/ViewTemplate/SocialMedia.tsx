@@ -1,7 +1,7 @@
 import Github from "@/Icon/Github"
 import Linkedin from "@/Icon/Linkedin"
 import Youtube from "@/Icon/Youtube"
-import { Mail } from "lucide-react"
+import { FileText } from "lucide-react"
 
 /////////////////////////////////////////////////////////////////
 // data des réseaux sociaux
@@ -9,7 +9,7 @@ const socials = [
     { Icon: Github, link: "https://github.com/Youvataque", label: "GitHub" },
     { Icon: Linkedin, link: "https://www.linkedin.com/in/yannis-seguin-540432161/", label: "LinkedIn" },
     { Icon: Youtube, link: "https://www.youtube.com/channel/UCQUgpvsakyzaLKko-a4lfBA", label: "YouTube" },
-    { Icon: Mail, link: "mailto:yannisseguin@gmail.com", label: "Email", lucide: true },
+    { Icon: FileText, link: "/cv.pdf", label: "CV", lucide: true },
 ]
 
 /////////////////////////////////////////////////////////////////
@@ -26,7 +26,7 @@ const SocialMedia: React.FC = () => {
                     className="group flex items-center gap-2.5 rounded-2xl px-5 py-2.5 max-md:px-4 max-md:py-2 bg-elementColor/60 backdrop-blur-lg shadow-sm shadow-primary/10 hover:shadow-lg hover:shadow-primary/20 transition-shadow duration-300"
                 >
                     {lucide ? (
-                        <Mail className="w-[18px] h-[18px] text-primary" />
+                        <FileText className="w-[18px] h-[18px] text-primary" />
                     ) : (
                         <Icon
                             width="20px"

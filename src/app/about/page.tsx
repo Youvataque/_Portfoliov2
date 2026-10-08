@@ -75,7 +75,7 @@ const About: React.FC = () => {
       <div className="flex w-full max-w-6xl flex-col px-6 max-md:px-4">
         {header()}
         <section className="py-24 max-md:py-16">
-          <SectionHeader index="01" eyebrow="Contact" title="Mes contacts" />
+          <SectionHeader title="Mes contacts" />
           <PerspectiveReveal>
             <HoverEffect items={contactData} className="-mx-2" />
           </PerspectiveReveal>

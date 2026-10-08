@@ -11,6 +11,7 @@ export const tagColors = {
   green: "bg-green-400/15 text-green-700",
   red: "bg-red-400/15 text-red-700",
   orange: "bg-orange-400/15 text-orange-700",
+  slate: "border-slate-500/30 bg-slate-400/15 text-slate-700",
   yellow: "bg-yellow-400/15 text-yellow-700",
 } as const;
 

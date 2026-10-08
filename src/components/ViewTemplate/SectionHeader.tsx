@@ -1,20 +1,18 @@
+import { cn } from "@/lib/utils";
+
 /////////////////////////////////////////////////////////////////
-// en-tête de section : surtitre optionnel (avec index) + titre
-const SectionHeader: React.FC<{ index?: string; eyebrow?: string; title: string }> = ({ index, eyebrow, title }) => (
-    <div className="mb-12 max-md:mb-8 flex flex-col gap-3">
-        {eyebrow && (
-            <span className="flex items-center gap-3 text-sm font-medium uppercase tracking-[0.2em] text-secondary">
-                {index && (
-                    <>
-                        <span>{index}</span>
-                        <span className="h-px w-10 bg-secondary/40" />
-                    </>
-                )}
-                {eyebrow}
-            </span>
+// en-tête de section : titre seul ; "sub" pour une sous-section sous un grand titre de page
+const SectionHeader: React.FC<{ title: string; level?: "section" | "sub" }> = ({ title, level = "section" }) => (
+    <h2
+        className={cn(
+            "font-bold tracking-tight text-primary",
+            level === "section"
+                ? "mb-12 max-md:mb-8 text-5xl max-xl:text-4xl max-md:text-3xl"
+                : "mb-6 max-md:mb-4 text-2xl max-md:text-xl"
         )}
-        <h2 className="text-5xl max-xl:text-4xl max-md:text-3xl font-bold tracking-tight text-primary">{title}</h2>
-    </div>
+    >
+        {title}
+    </h2>
 );
 
 export default SectionHeader;

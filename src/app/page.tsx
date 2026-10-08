@@ -4,7 +4,9 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import BodyTemplate from "@/components/FondamentalAppComp/BodyTemplate";
-import { MyBentoGrid } from "@/components/ViewTemplate/MyBentoGrid";
+import ProjectTile from "@/components/ViewTemplate/ProjectTile";
+import OtherProjectsBanner from "@/components/ViewTemplate/OtherProjectsBanner";
+import { projects } from "@/data/projects";
 import { TechStack } from "@/components/ViewTemplate/TechStack";
 import Footer from "@/components/FondamentalAppComp/Footer";
 import SocialMedia from "@/components/ViewTemplate/SocialMedia";
@@ -57,10 +59,15 @@ export default function Home() {
   // section affichant tout les projets sous forme de bento
   function projectZone() {
     return <section className="py-24 max-md:py-16">
-      <SectionHeader title="Mes derniers projets" />
+      <SectionHeader title="Mes projets les plus importants" />
       <PerspectiveReveal>
-        <MyBentoGrid />
+        <div className="flex flex-col gap-6">
+          {projects.filter((p) => p.category === "principal").map((project) => (
+            <ProjectTile key={project.slug} project={project} />
+          ))}
+        </div>
       </PerspectiveReveal>
+      <OtherProjectsBanner />
     </section>
   }
 

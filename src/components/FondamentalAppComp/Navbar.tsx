@@ -3,7 +3,8 @@ import { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { animate, motion, useMotionValue, useTransform } from 'framer-motion';
+import { AnimatePresence, animate, motion, useMotionValue, useTransform } from 'framer-motion';
+import { Menu, X } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 /////////////////////////////////////////////////////////////////
@@ -21,6 +22,7 @@ const NavBar = () => {
     const [active, setActive] = useState(pathname);
     const linkRefs = useRef<Record<string, HTMLAnchorElement | null>>({});
     const firstRender = useRef(true);
+    const [menuOpen, setMenuOpen] = useState(false);
 
     /////////////////////////////////////////////////////////////////
     // goutte : bords gauche/droit animés séparément pour l'étirer entre deux liens
@@ -36,6 +38,16 @@ const NavBar = () => {
     });
 
     useEffect(() => setActive(pathname), [pathname]);
+
+    /////////////////////////////////////////////////////////////////
+    // menu mobile : se ferme au changement de page et avec Échap
+    useEffect(() => setMenuOpen(false), [pathname]);
+    useEffect(() => {
+        if (!menuOpen) return;
+        const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setMenuOpen(false);
+        window.addEventListener('keydown', onKey);
+        return () => window.removeEventListener('keydown', onKey);
+    }, [menuOpen]);
 
     /////////////////////////////////////////////////////////////////
     // déplacement de la goutte vers le lien actif : le bord avant part, le bord arrière suit
@@ -95,10 +107,10 @@ const NavBar = () => {
     }
 
     /////////////////////////////////////////////////////////////////
-    // partie droite de la navBar (links)
+    // partie droite de la navBar (links), desktop uniquement
     function navLinks() {
         return (
-            <div className='relative flex items-center gap-1'>
+            <div className='relative flex items-center gap-1 max-md:hidden'>
                 <motion.span
                     aria-hidden
                     className="absolute inset-y-0 left-0 rounded-full bg-primary"
@@ -123,13 +135,75 @@ const NavBar = () => {
     }
 
     /////////////////////////////////////////////////////////////////
+    // bouton hamburger, mobile uniquement
+    function menuButton() {
+        return (
+            <button
+                type="button"
+                onClick={() => setMenuOpen((open) => !open)}
+                aria-label={menuOpen ? "Fermer le menu" : "Ouvrir le menu"}
+                aria-expanded={menuOpen}
+                aria-controls="mobile-menu"
+                className="md:hidden grid h-10 w-10 place-items-center rounded-full text-primary transition-colors duration-200 hover:bg-foreground/10"
+            >
+                <AnimatePresence mode="wait" initial={false}>
+                    <motion.span
+                        key={menuOpen ? "close" : "open"}
+                        initial={{ rotate: -90, opacity: 0 }}
+                        animate={{ rotate: 0, opacity: 1 }}
+                        exit={{ rotate: 90, opacity: 0 }}
+                        transition={{ duration: 0.15 }}
+                    >
+                        {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+                    </motion.span>
+                </AnimatePresence>
+            </button>
+        );
+    }
+
+    /////////////////////////////////////////////////////////////////
+    // panneau du menu mobile (verre flouté sous la navbar)
+    function mobileMenu() {
+        return (
+            <AnimatePresence>
+                {menuOpen && (
+                    <motion.div
+                        id="mobile-menu"
+                        initial={{ opacity: 0, y: -8, scale: 0.98 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: -8, scale: 0.98 }}
+                        transition={{ duration: 0.2, ease: 'easeOut' }}
+                        className="md:hidden mt-2 flex w-full flex-col gap-1 rounded-3xl bg-elementColor/80 p-2 shadow-lg shadow-primary/10 backdrop-blur-lg origin-top"
+                    >
+                        {links.map(({ title, dest }) => (
+                            <Link
+                                key={dest}
+                                href={dest}
+                                onClick={() => { setActive(dest); setMenuOpen(false); }}
+                                className={cn(
+                                    "rounded-2xl px-4 py-3 text-base font-medium transition-colors duration-200",
+                                    active === dest ? "bg-primary text-background" : "text-primary hover:bg-foreground/10"
+                                )}
+                            >
+                                {title}
+                            </Link>
+                        ))}
+                    </motion.div>
+                )}
+            </AnimatePresence>
+        );
+    }
+
+    /////////////////////////////////////////////////////////////////
     // code principale
     return (
-        <header className="fixed inset-x-0 top-4 z-50 flex justify-center px-6 max-md:px-3">
+        <header className="fixed inset-x-0 top-4 z-50 flex flex-col items-center px-6 max-md:px-3">
             <nav className="bg-elementColor/70 backdrop-blur-lg shadow-sm shadow-primary/10 flex w-full max-w-6xl items-center justify-between rounded-full p-2">
                 {title()}
                 {navLinks()}
+                {menuButton()}
             </nav>
+            {mobileMenu()}
         </header>
     );
 };

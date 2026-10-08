@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/FondamentalAppComp/Navbar";
+import RouteHistory from "@/components/FondamentalAppComp/RouteHistory";
 import { cn } from "@/lib/utils";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -26,7 +27,8 @@ export default function RootLayout({
         <title>Seguin - Website</title>
       </head>
       <body className={cn(inter.className, "bg-background overflow-x-hidden")}>
-        <Navbar /> 
+        <Navbar />
+        <RouteHistory />
         {children}
       </body>
     </html>

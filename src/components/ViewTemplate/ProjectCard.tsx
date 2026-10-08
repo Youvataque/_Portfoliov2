@@ -12,9 +12,11 @@ interface ProjectCardProps {
   type: JSX.Element;
   typeColor: TagColor;
   tags: JSX.Element[];
+  // projet arrêté : ajoute une étiquette « Arrêté »
+  discontinued?: boolean;
 }
 
-const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, href, tags, type, typeColor }) => {
+const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, href, tags, type, typeColor, discontinued }) => {
   return (
     <Link
       href={href}
@@ -38,8 +40,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, href, tag
 
       <p className="relative z-10 mt-2 text-sm text-primary/85 leading-relaxed">{description}</p>
 
-      <div className="relative z-10 mt-2">
+      <div className="relative z-10 mt-2 flex flex-wrap gap-2">
         <Tag color={typeColor}>{type}</Tag>
+        {discontinued && <Tag color="slate">Arrêté</Tag>}
       </div>
 
       <div className="flex-grow" />
