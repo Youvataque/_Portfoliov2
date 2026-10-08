@@ -1,10 +1,10 @@
 import BodyTemplate from "@/components/FondamentalAppComp/BodyTemplate";
 import Footer from "@/components/FondamentalAppComp/Footer";
 import MainText from "@/components/ViewTemplate/MainText";
-import SousTitle from "@/components/ViewTemplate/SousTitle";
-import Title from "@/components/ViewTemplate/Title";
+import SectionHeader from "@/components/ViewTemplate/SectionHeader";
+import PerspectiveReveal from "@/components/ViewTemplate/PerspectiveReveal";
+import ProfileScene from "@/components/ViewTemplate/ProfileScene";
 import { HoverEffect } from "@/components/ui/card-hover-effect";
-import Image from "next/image";
 
 const About: React.FC = () => {
 
@@ -49,54 +49,38 @@ const About: React.FC = () => {
   ];
 
   /////////////////////////////////////////////////////////////////
-  // mini description de mon parcours
-  function description() {
-    return <MainText
-      // src/app/about/page.tsx @ 55
-
-      text={"Passé par le freelance et aujourd'hui CTO, je connais les contraintes du réel. Je déploie des stacks complètes (Front, Back, DevOps) avec une obsession : éviter la dette technique et garantir la scalabilité.\n\nUne technologie doit être invisible et efficace. J'utilise l'IA et l'automatisation pour coder intelligemment, ce qui me permet de livrer des architectures robustes en des temps records. Pas de sur-ingénierie, juste du résultat."}
-      style="text-primary pt-4"
-    />
-  }
-
-  /////////////////////////////////////////////////////////////////
-  // header du composant avec pp et infos
+  // header du composant avec pp et parcours
   function header() {
-    return <div className="flex flex-row justify-between items-center h-full">
-      <div className="flex flex-col w-full items-start">
-        <SousTitle text="Un peu sur moi -" style="text-secondary" />
-        <Title text="Yannis Seguin" style="text-secondary" />
-        <div className="max-md:hidden">
-          {description()}
-        </div>
+    return <section className="flex min-h-screen items-center justify-between gap-12 pt-28 pb-16 max-md:flex-col-reverse max-md:items-start max-md:justify-center max-md:gap-8">
+      <div className="flex flex-1 flex-col items-start">
+        <span className="bg-elementColor/60 backdrop-blur-xl shadow-sm shadow-primary/10 rounded-full px-4 py-1.5 text-sm font-medium text-primary">
+          Un peu sur moi —
+        </span>
+        <h1 className="mt-6 whitespace-nowrap text-6xl max-xl:text-5xl max-lg:text-4xl font-bold tracking-tight text-primary">
+          Yannis Seguin
+        </h1>
+        <MainText
+          text={"Passé par le freelance et aujourd'hui CTO, je connais les contraintes du réel. Je déploie des stacks complètes (Front, Back, DevOps) avec une obsession : éviter la dette technique et garantir la scalabilité.\n\nUne technologie doit être invisible et efficace. J'utilise l'IA et l'automatisation pour coder intelligemment, ce qui me permet de livrer des architectures robustes en des temps records. Pas de sur-ingénierie, juste du résultat."}
+          style="mt-6 pt-0 max-w-xl text-lg max-xl:text-base leading-relaxed text-foreground"
+        />
       </div>
-      <div className="flex flex-col w-full max-md:w-auto items-end">
-        <div className="relative w-96 h-96 max-2xl:w-80 max-2xl:h-80 max-xl:w-64 max-xl:h-64 max-md:w-44 max-md:h-44">
-          <Image fill src="/Img/profilPic.webp" alt="Yannis Seguin" />
-        </div>
-      </div>
-    </div>
+      <ProfileScene className="w-full max-w-[340px] max-lg:max-w-[280px] max-md:max-w-[240px] shrink-0 max-md:mx-auto" />
+    </section>
   }
 
   /////////////////////////////////////////////////////////////////
   // corp du code
   return (
     <BodyTemplate>
-      <div className="flex flex-col justify-center items-center w-[50vw] max-2xl:w-[70vw] max-md:w-[95vw]">
-        <div className="flex flex-col justify-center items-center min-h-screen">
-          {header()}
-          <div className="md:hidden">
-            {description()}
-          </div>
-        </div>
-        <div className="flex flex-col justify-center items-center min-h-screen w-screen">
-          <SousTitle text="Mes contacts :" style="text-secondary" />
-          <div className="max-w-5xl mx-auto px-8 mt-8">
-            <HoverEffect items={contactData} />
-          </div>
-        </div>
+      <div className="flex w-full max-w-6xl flex-col px-6 max-md:px-4">
+        {header()}
+        <section className="py-24 max-md:py-16">
+          <SectionHeader index="01" eyebrow="Contact" title="Mes contacts" />
+          <PerspectiveReveal>
+            <HoverEffect items={contactData} className="-mx-2" />
+          </PerspectiveReveal>
+        </section>
         <Footer />
-        <div className="pb-4" />
       </div>
     </BodyTemplate>
   );

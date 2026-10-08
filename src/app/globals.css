@@ -5,19 +5,15 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-:root {
-  --background: #11131F;
-  --secondary: #9EB1FF;
-}
-
 @theme {
-  --color-background: #13131E;
-  --color-foreground: #141726;
-  --color-primary: #D6E1FF;
-  --color-secondary: #9EB1FF;
-  --color-borderColor: #304384;
-  --color-elementColor: #182449;
-  --color-accentColor: #1d2e62;
+  /* thème clair blanc / bleu : palette Tailwind + bleu de fond de la photo de profil */
+  --color-background: var(--color-white);
+  --color-foreground: var(--color-slate-500);
+  --color-primary: var(--color-blue-950);
+  --color-secondary: var(--color-sky-600);
+  --color-borderColor: var(--color-sky-100);
+  --color-elementColor: var(--color-white);
+  --color-accentColor: #B2EFFD;
 
   --font-size-md: 16px;
   --font-size-3.5xl: 35px;
@@ -29,18 +25,6 @@
 
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
-  --animate-grid: grid 10s linear infinite;
-
-  @keyframes grid {
-    0% {
-      transform: translateY(-300px);
-    }
-
-    100% {
-      transform: translateY(0);
-    }
-  }
-
   @keyframes accordion-down {
     from {
       height: 0;
@@ -69,7 +53,25 @@
   ::before,
   ::backdrop,
   ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
+    border-color: var(--color-borderColor, currentColor);
+  }
+}
+
+/* glassmorphism clair : verre blanc translucide sur halos bleus */
+@utility glass {
+  background-color: color-mix(in oklab, var(--color-elementColor) 55%, transparent);
+  box-shadow: 0 8px 32px -8px color-mix(in oklab, var(--color-primary) 12%, transparent);
+  /* utilitaires Tailwind : les déclarations brutes étaient fusionnées en -webkit- seul (ignoré par Chrome) */
+  @apply backdrop-blur-lg backdrop-saturate-150;
+}
+
+@utility glass-hover {
+  transition-property: background-color, box-shadow, transform;
+  transition-duration: 300ms;
+
+  &:hover {
+    background-color: color-mix(in oklab, var(--color-elementColor) 75%, transparent);
+    box-shadow: 0 12px 40px -8px color-mix(in oklab, var(--color-secondary) 25%, transparent);
   }
 }
 

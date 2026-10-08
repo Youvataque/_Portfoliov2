@@ -8,7 +8,7 @@ import Image from "next/image";
 // corp du code
 export function MyBentoGrid() {
   return (
-    <BentoGrid className="w-[50vw] max-2xl:w-[70vw] max-md:w-[85vw] mx-auto lg:auto-rows-[20rem]">
+    <BentoGrid className="w-full lg:auto-rows-[20rem]">
       <NeekoBentoItem />
       {items.map((item, i) => (
         <BentoGridItem
@@ -37,7 +37,7 @@ const items = [
   {
     title: "HomeFlix: Streaming maison !",
     description: "Mettez vous aussi en place votre propre plateforme vidéo ! Relié à la source de votre choix vous pourrez télécharger, regarder et administrer votre contenue de n'importe où !",
-    header: <div className="relative w-full h-full flex items-center justify-center bg-purple-500/10">
+    header: <div className="relative w-full h-full flex items-center justify-center bg-purple-500/10 backdrop-blur-md">
       <div className="relative w-20 h-20">
         <Image fill src="/Img/homeflixLogo.webp" alt="HomeFlix" className="object-contain" />
       </div>
@@ -49,7 +49,7 @@ const items = [
   {
     title: "Épona & Vous",
     description: "Site vitrine sur-mesure élégant, fluide et optimisé SEO pour cette agence de Wedding Planning.",
-    header: <div className="relative w-full h-full flex items-center justify-center bg-blue-500/10">
+    header: <div className="relative w-full h-full flex items-center justify-center bg-accentColor/30 backdrop-blur-md">
       <div className="relative w-20 h-20">
         <Image fill src="/Img/epona.png" alt="Épona & Vous" className="object-contain" />
       </div>
@@ -61,7 +61,7 @@ const items = [
   {
     title: "NewBat",
     description: "Entreprise du batiment ? Vous souhaitez passer au numérique ? Avec NewBat entamez votre transition !",
-    header: <div className="relative w-full h-full flex items-center justify-center bg-green-500/10">
+    header: <div className="relative w-full h-full flex items-center justify-center bg-gradient-to-br from-secondary to-primary">
       <div className="relative w-20 h-20">
         <Image fill src="/Img/logoWhite.webp" alt="NewBat" className="object-contain" />
       </div>
@@ -73,7 +73,7 @@ const items = [
   {
     title: "SolsEnergiesBains",
     description: "SolsÉnergiesBains est aujourd'hui équipé d'un site internet sur mesure, piloté par une application mobile. Cela leur permet d'avoir toujours un site internet à la page, sans couts mensuels.",
-    header: <div className="relative w-full h-full flex items-center justify-center bg-blue-500/10">
+    header: <div className="relative w-full h-full flex items-center justify-center bg-accentColor/30 backdrop-blur-md">
       <div className="relative w-20 h-20">
         <Image fill src="/Img/Logo_SEB.png" alt="SolsEnergiesBains" className="object-contain" />
       </div>

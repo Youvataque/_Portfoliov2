@@ -1,9 +1,12 @@
 /////////////////////////////////////////////////////////////////
 // composant footer
 const Footer: React.FC = () => {
-    return <p className="text-primary text-xs italic">
-        Créé et designé par SEGUIN Yannis
-    </p>
+    return (
+        <footer className="mt-16 flex w-full items-center justify-between gap-2 border-t border-borderColor py-8 text-xs text-primary max-md:flex-col">
+            <p>Créé et designé par SEGUIN Yannis</p>
+            <p>© {new Date().getFullYear()} Seguin-dev</p>
+        </footer>
+    );
 }
 
 export default Footer;

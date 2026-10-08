@@ -40,14 +40,13 @@ export const BentoGridItem = ({
     <div
       className={cn(
         "row-span-1 group/bento relative rounded-3xl justify-between flex flex-col space-y-0 h-full",
-        "bg-white/5 dark:bg-black/20 backdrop-blur-md border border-white/10",
-        "transition-all duration-300 ease-out hover:-translate-y-1 hover:bg-white/10 hover:border-white/25",
-        "overflow-hidden shadow-2xl shadow-black/20",
+        "glass glass-hover ease-out hover:-translate-y-1",
+        "overflow-hidden",
         className
       )}
     >
       {/* Background Gradient Effect */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover/bento:opacity-100 transition-opacity duration-500 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-br from-accentColor/30 to-transparent opacity-0 group-hover/bento:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
       {/* Header / Media - Goes Edge to Edge - Proportional Height on Desktop, Fixed on Mobile */}
       <div className="w-full h-32 lg:h-[60%] transition-transform duration-300 group-hover/bento:scale-[1.02]">
@@ -62,17 +61,17 @@ export const BentoGridItem = ({
             {link && (
               <Link
                 href={link}
-                className="opacity-0 group-hover/bento:opacity-100 transition-opacity duration-300 p-2 rounded-full bg-white/10 hover:bg-white/20"
+                className="opacity-0 group-hover/bento:opacity-100 transition-opacity duration-300 p-2 rounded-full bg-accentColor/50 backdrop-blur-md hover:bg-accentColor"
               >
-                <ArrowUpRight className="w-4 h-4 text-white" />
+                <ArrowUpRight className="w-4 h-4 text-primary" />
               </Link>
             )}
           </div>
 
-          <h2 className="font-sans font-bold text-xl text-white mb-2">
+          <h2 className="font-sans font-bold text-xl text-primary mb-2">
             {title}
           </h2>
-          <p className="font-sans font-medium text-neutral-300 text-sm leading-relaxed line-clamp-3">
+          <p className="font-sans font-medium text-foreground text-sm leading-relaxed line-clamp-3">
             {description}
           </p>
         </div>

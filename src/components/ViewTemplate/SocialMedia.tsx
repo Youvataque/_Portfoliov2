@@ -16,25 +16,25 @@ const socials = [
 // Composant des réseaux sociaux (boutons allongés logo + nom)
 const SocialMedia: React.FC = () => {
     return (
-        <div className="flex flex-row flex-wrap gap-3 mt-4">
+        <div className="flex flex-row flex-wrap gap-3">
             {socials.map(({ Icon, link, label, lucide }) => (
                 <a
                     key={label}
                     href={link}
                     target="_blank"
                     aria-label={label}
-                    className="group flex items-center gap-2.5 rounded-2xl px-5 py-2.5 max-md:px-4 max-md:py-2 border border-white/10 bg-white/5 dark:bg-black/20 backdrop-blur-md shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/10"
+                    className="group flex items-center gap-2.5 rounded-2xl px-5 py-2.5 max-md:px-4 max-md:py-2 bg-elementColor/60 backdrop-blur-lg shadow-sm shadow-primary/10 hover:shadow-lg hover:shadow-primary/20 transition-shadow duration-300"
                 >
                     {lucide ? (
-                        <Mail className="w-[18px] h-[18px] text-primary group-hover:text-secondary transition-colors duration-300" />
+                        <Mail className="w-[18px] h-[18px] text-primary" />
                     ) : (
                         <Icon
                             width="20px"
                             height="20px"
-                            color="text-primary fill-current group-hover:text-secondary transition-colors duration-300"
+                            color="text-primary fill-current"
                         />
                     )}
-                    <span className="text-sm max-md:text-xs font-medium text-primary group-hover:text-secondary transition-colors duration-300">
+                    <span className="text-sm max-md:text-xs font-medium text-primary">
                         {label}
                     </span>
                 </a>

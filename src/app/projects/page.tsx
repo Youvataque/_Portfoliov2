@@ -110,13 +110,13 @@ const Projects: React.FC = () => {
             type: <p>Prestation</p>,
             typeColor: "blue" as const,
             tags: [
-                <SiReact key="react2" className="w-5 h-5 text-blue-400" />,
-                <SiNextdotjs key="next1" className="w-5 h-5 text-blue-400" />,
-                <SiTailwindcss key="tailwind1" className="w-5 h-5 text-blue-400" />,
-                <SiTypescript key="typescript1" className="w-5 h-5 text-blue-400" />,
-                <SiFigma key="figma3" className="w-5 h-5 text-blue-400" />,
-                <SiGithub key="github5" className="w-5 h-5 text-blue-400" />,
-                <SiAdobephotoshop key="photoshop4" className="w-5 h-5 text-blue-400" />,
+                <SiReact key="react2" className="w-5 h-5 text-secondary" />,
+                <SiNextdotjs key="next1" className="w-5 h-5 text-secondary" />,
+                <SiTailwindcss key="tailwind1" className="w-5 h-5 text-secondary" />,
+                <SiTypescript key="typescript1" className="w-5 h-5 text-secondary" />,
+                <SiFigma key="figma3" className="w-5 h-5 text-secondary" />,
+                <SiGithub key="github5" className="w-5 h-5 text-secondary" />,
+                <SiAdobephotoshop key="photoshop4" className="w-5 h-5 text-secondary" />,
             ]
         },
         {
@@ -126,15 +126,15 @@ const Projects: React.FC = () => {
             type: <p>Prestation</p>,
             typeColor: "blue" as const,
             tags: [
-                <SiReact key="react2" className="w-5 h-5 text-blue-400" />,
-                <SiFlutter key="flutter4" className="w-5 h-5 text-blue-400" />,
-                <SiFirebase key="firebase4" className="w-5 h-5 text-blue-400" />,
-                <SiVite key="vite1" className="w-5 h-5 text-blue-400" />,
-                <SiTailwindcss key="tailwind1" className="w-5 h-5 text-blue-400" />,
-                <SiTypescript key="typescript1" className="w-5 h-5 text-blue-400" />,
-                <SiFigma key="figma3" className="w-5 h-5 text-blue-400" />,
-                <SiGithub key="github5" className="w-5 h-5 text-blue-400" />,
-                <SiAdobephotoshop key="photoshop4" className="w-5 h-5 text-blue-400" />
+                <SiReact key="react2" className="w-5 h-5 text-secondary" />,
+                <SiFlutter key="flutter4" className="w-5 h-5 text-secondary" />,
+                <SiFirebase key="firebase4" className="w-5 h-5 text-secondary" />,
+                <SiVite key="vite1" className="w-5 h-5 text-secondary" />,
+                <SiTailwindcss key="tailwind1" className="w-5 h-5 text-secondary" />,
+                <SiTypescript key="typescript1" className="w-5 h-5 text-secondary" />,
+                <SiFigma key="figma3" className="w-5 h-5 text-secondary" />,
+                <SiGithub key="github5" className="w-5 h-5 text-secondary" />,
+                <SiAdobephotoshop key="photoshop4" className="w-5 h-5 text-secondary" />
             ]
         },
 

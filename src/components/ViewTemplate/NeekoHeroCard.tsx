@@ -81,7 +81,7 @@ const Badges: React.FC = () => (
 /////////////////////////////////////////////////////////////////
 // puce d'une techno
 const Chip: React.FC<Tech> = ({ name, icon: Icon }) => (
-  <span className="flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/5 px-2.5 py-1 text-xs text-primary/90">
+  <span className="flex items-center gap-1.5 rounded-lg bg-elementColor/60 backdrop-blur-md px-2.5 py-1 text-xs text-primary/90">
     {Icon && <Icon className="w-3.5 h-3.5" />}
     {name}
   </span>
@@ -115,9 +115,9 @@ const TechStack: React.FC = () => (
 /////////////////////////////////////////////////////////////////
 // panneau visuel (logo)
 const LogoPanel: React.FC = () => (
-  <div className="relative flex items-center justify-center lg:w-[26%] p-6 max-md:py-8 bg-gradient-to-br from-secondary/15 to-secondary/[0.03] border-b lg:border-b-0 lg:border-r border-white/10">
+  <div className="relative flex items-center justify-center lg:w-[26%] p-6 max-md:py-8 bg-gradient-to-br from-secondary to-primary">
     <div className="relative w-20 h-20 max-md:w-16 max-md:h-16 transition-transform duration-500 group-hover:scale-110">
-      <Image fill src="/Img/neeko_logov0.svg" alt="Neeko" className="object-contain drop-shadow-[0_0_25px_rgba(158,177,255,0.35)]" />
+      <Image fill src="/Img/neeko_logov0.svg" alt="Neeko" className="object-contain drop-shadow-[0_0_25px_var(--color-accentColor)]" />
     </div>
   </div>
 );
@@ -129,7 +129,7 @@ const Header: React.FC = () => (
     <h3 className="text-2xl font-bold text-primary group-hover:text-secondary transition-colors duration-300">
       Neeko
     </h3>
-    <span className="shrink-0 p-1.5 rounded-full bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+    <span className="shrink-0 p-1.5 rounded-full bg-accentColor/50 backdrop-blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300">
       <ArrowUpRight className="w-4 h-4 text-primary" />
     </span>
   </div>
@@ -170,12 +170,11 @@ const NeekoHeroCard: React.FC = () => (
     target="_blank"
     className={cn(
       "group relative flex flex-col lg:flex-row w-80 flex-none md:w-auto md:flex-1 md:mx-[5vw] overflow-hidden rounded-3xl",
-      "border border-white/10 hover:border-white/25 bg-white/5 dark:bg-black/20 hover:bg-white/10 backdrop-blur-md",
-      "shadow-2xl shadow-black/30 transition-all duration-300 ease-out hover:-translate-y-1"
+      "glass glass-hover ease-out hover:-translate-y-1"
     )}
   >
     {/* halo accent */}
-    <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-secondary/10 via-transparent to-transparent opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
+    <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-accentColor/30 via-transparent to-transparent opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
     <LogoPanel />
     <Content />
   </Link>
