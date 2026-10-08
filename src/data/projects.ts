@@ -64,6 +64,8 @@ export interface Project {
     galleryStyle?: "card" | "device";
     // titre de la galerie (par défaut « L'app en images »)
     galleryTitle?: MarkedTitle;
+    // projet arrêté remplacé par un autre : carte de redirection affichée sous l'en-tête
+    successor?: { slug: string; title: string; text: string };
 }
 
 export const projects: Project[] = [
@@ -291,6 +293,110 @@ export const projects: Project[] = [
             { src: "/Img/SEB/store/07.webp", alt: "Galerie salle de bain dans l'app" },
             { src: "/Img/SEB/store/08.webp", alt: "Statistiques du site" },
             { src: "/Img/SEB/store/09.webp", alt: "Demande de contact à convertir en client" },
+        ],
+    },
+    {
+        slug: "epona",
+        category: "web",
+        name: "Épona & vous",
+        logo: "/Img/Epona/logo.webp",
+        theme: "theme-epona",
+        role: "Mission freelance",
+        period: "2025, 1 mois",
+        url: "https://www.epona-et-vous.fr/",
+        cover: "/Img/Epona/00_cover.jpg",
+        summary:
+            "Le site vitrine d'une agence de wedding planning à Montpellier. Il fallait traduire une direction artistique haut de gamme déjà existante en un site fluide sur tous les écrans, tenir en une seule page et ressortir dans les recherches locales.",
+        stack: ["Next.js", "React", "TypeScript", "Tailwind", "Vercel"],
+        hero: {
+            title: { before: "Épona ", mark: "& vous" },
+            lead: "Un site vitrine haut de gamme pour une agence de wedding planning à Montpellier, dessiné d'après la direction artistique de Théo Mordacq.",
+            screen: "/Img/Epona/screen-home.webp",
+        },
+        sections: [
+            {
+                kicker: "La DA",
+                body: [
+                    "La direction artistique existait déjà, signée Théo Mordacq pour les brochures de l'agence. Mon travail a été de la décliner en site sans la trahir, en reprenant ses quatre couleurs, Chocookies, Lipstick, Bubbledream et Dresscode, ses formes rondes roses et le duo de polices Outfit et Montserrat.",
+                    "Le site garde le ton feutré et élégant du papier, du carrousel d'accueil aux réalisations présentées une par une, tout en restant lisible sur un fond sombre.",
+                ],
+                image: { src: "/Img/Epona/01_da.jpg", alt: "La direction artistique déclinée en site" },
+            },
+            {
+                kicker: "Grand écran",
+                body: [
+                    "Le site tient en une seule page, découpée en sections Accueil, Présentation, Réalisations, Formules et Rendez-vous, avec une navigation qui glisse jusqu'à la bonne ancre. Les formules se téléchargent en brochures PDF et les partenaires de confiance de l'agence ont leur propre vitrine.",
+                    "Construit avec Next.js et Tailwind, il est hébergé sur Vercel. Je continue de le faire vivre depuis sa mise en ligne, partenaires, coordonnées et mentions légales mis à jour au fil des mois.",
+                ],
+                image: { src: "/Img/Epona/02_desktop.jpg", alt: "Le site sur grand écran" },
+            },
+            {
+                kicker: "Mobile",
+                body: [
+                    "Les futurs mariés découvrent le plus souvent l'agence depuis leur téléphone. Chaque section a donc sa version mobile, avec un menu hamburger, un carrousel d'accueil et des boutons d'appel et d'e-mail à portée de pouce.",
+                    "Côté référencement, chaque section a sa propre entrée dans le sitemap et les métadonnées visent Montpellier et l'Occitanie, pour ressortir sur les recherches locales de wedding planner.",
+                ],
+                image: { src: "/Img/Epona/03_mobile.jpg", alt: "Le site sur mobile" },
+            },
+        ],
+        galleryTitle: { before: "Le site en ", mark: "images" },
+        gallery: [
+            { src: "/Img/Epona/store/01.webp", alt: "Accueil et carrousel" },
+            { src: "/Img/Epona/store/02.webp", alt: "Nos réalisations" },
+            { src: "/Img/Epona/store/03.webp", alt: "Une réalisation en détail" },
+            { src: "/Img/Epona/store/04.webp", alt: "Nos formules en brochures" },
+            { src: "/Img/Epona/store/05.webp", alt: "Contactez-nous" },
+            { src: "/Img/Epona/store/06.webp", alt: "Partenaires de confiance" },
+        ],
+    },
+    {
+        slug: "newbat",
+        category: "mobile",
+        name: "NewBat",
+        logo: "/Img/NewBat/logo.webp",
+        theme: "theme-newbat",
+        role: "Fondateur et développeur",
+        period: "2024, arrêté",
+        url: "https://www.youtube.com/watch?v=z0gpEHgiw-M",
+        urlLabel: "Voir le film de lancement",
+        cover: "/Img/NewBat/00_cover.jpg",
+        summary:
+            "La première version de Clane. Une suite de trois apps pour les artisans du bâtiment, avec son site de lancement. Il fallait digitaliser des métiers encore très papier sans perdre les artisans en route. Projet aujourd'hui arrêté, il continue dans Clane.",
+        stack: ["Flutter", "Firebase", "React", "Vite", "Tailwind", "Figma"],
+        hero: {
+            title: { before: "L'informatique ", mark: "du bâtiment" },
+            lead: "Une suite de trois apps pour les artisans, Intervention, Chantier et Devis, et son site de lancement. La première version de ce qui est devenu Clane.",
+            screen: "/Img/NewBat/screen-home.webp",
+        },
+        successor: {
+            slug: "clane",
+            title: "NewBat continue dans Clane",
+            text: "La suite a laissé place à Clane, un SaaS recentré sur l'entretien CVC, reconstruit sur un back Laravel et utilisable hors connexion. C'est là que vit le projet aujourd'hui.",
+        },
+        sections: [
+            {
+                kicker: "La suite",
+                body: [
+                    "NewBat est né de l'outil d'interventions que j'avais écrit pour un chauffagiste. Je l'ai élargi en trois apps Flutter pour les artisans du bâtiment. Intervention gère les entretiens et les check-up de climatisation et de pompes à chaleur, Chantier suit les tâches et le matériel de chaque chantier, Devis prend les mesures et les croquis sur le terrain, relié à la base clients.",
+                    "Les apps partageaient la même base sur Firebase et se vendaient sur commande, à l'année ou réglables au mois. C'est aussi NewBat qui recevait les prospects du site de [Sols Énergies Bains](/projects/solsenergiesbains), convertis en clients d'un seul geste.",
+                ],
+                image: { src: "/Img/NewBat/01_suite.jpg", alt: "Les trois apps de la suite NewBat" },
+            },
+            {
+                kicker: "Le site",
+                body: [
+                    "Le site de lancement présentait chaque app avec sa couleur, bleu pour Intervention, orange pour Chantier et vert pour Devis, autour d'un film de démonstration et d'une foire aux questions pour rassurer les artisans.",
+                    "Construit avec React, Vite et Tailwind et hébergé sur Firebase, il accompagnait la sortie de la suite, de la maquette Figma à la mise en ligne.",
+                ],
+                image: { src: "/Img/NewBat/02_site.jpg", alt: "Le site de lancement de NewBat" },
+            },
+        ],
+        galleryTitle: { before: "Le site en ", mark: "images" },
+        gallery: [
+            { src: "/Img/NewBat/store/01.webp", alt: "Accueil du site et film de démonstration" },
+            { src: "/Img/NewBat/store/02.webp", alt: "Présentation de l'app Intervention" },
+            { src: "/Img/NewBat/store/03.webp", alt: "Présentation de l'app Chantier" },
+            { src: "/Img/NewBat/store/04.webp", alt: "Présentation de l'app Devis et questions" },
         ],
     },
 ];

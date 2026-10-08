@@ -268,3 +268,81 @@
   --font-heading: var(--font-inter), sans-serif;
   --font-mono: var(--font-jetbrains), ui-monospace, monospace;
 }
+
+/* DA Épona & vous (d'après Théo Mordacq) : Chocookies / Lipstick / Bubbledream / Dresscode, Outfit + Montserrat */
+@theme static {
+  --color-epona-chocookies: #352F2D;
+  --color-epona-chocookies2: #2A2524;
+  --color-epona-lipstick: #C26799;
+  --color-epona-bubbledream: #F7E4EF;
+  --color-epona-dresscode: #FFFFFF;
+  --color-epona-card: #403936;
+  --color-epona-line: #4A4240;
+  --color-epona-muted: #CFC4C9;
+}
+
+.theme-epona {
+  --color-project-bg: var(--color-epona-chocookies);
+  --color-project-ink: var(--color-epona-dresscode);
+  --color-project-ink2: var(--color-epona-bubbledream);
+  --color-project-accent: var(--color-epona-lipstick);
+  --color-project-accentSoft: var(--color-epona-bubbledream);
+  --color-project-muted: var(--color-epona-muted);
+  --color-project-surface: var(--color-epona-card);
+  --color-project-line: var(--color-epona-line);
+  --color-project-brand: var(--color-epona-dresscode);
+  --color-project-markBg: transparent;
+  --color-project-markText: var(--color-epona-lipstick);
+  --project-mark-px: 0;
+  --project-title-case: none;
+  /* titres fins, comme dans la DA */
+  --project-title-weight: 400;
+  --color-project-chipBg: var(--color-epona-card);
+  --color-project-chipText: var(--color-epona-bubbledream);
+  --color-project-chipDot: var(--color-epona-lipstick);
+  --color-project-heroDisc: var(--color-epona-lipstick);
+  --color-project-ctaBg: var(--color-epona-lipstick);
+  --color-project-ctaText: var(--color-epona-dresscode);
+  --color-project-bezel: var(--color-epona-chocookies2);
+  --font-current: var(--font-montserrat), sans-serif;
+  --font-heading: var(--font-outfit), sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+}
+
+/* DA NewBat (v1, 2024) : fond bleu très clair, bleu Intervention, orange Chantier, vert Devis, Helvetica */
+@theme static {
+  --color-newbat-bg: #F4FAFF;
+  --color-newbat-ink: #10233D;
+  --color-newbat-blue: #1174CF;
+  --color-newbat-orange: #F29235;
+  --color-newbat-green: #52C848;
+  --color-newbat-surface: #E9EEF5;
+  --color-newbat-line: #DCE5F0;
+  --color-newbat-muted: #4D5D73;
+}
+
+.theme-newbat {
+  --color-project-bg: var(--color-newbat-bg);
+  --color-project-ink: var(--color-newbat-ink);
+  --color-project-ink2: var(--color-newbat-blue);
+  --color-project-accent: var(--color-newbat-blue);
+  --color-project-accentSoft: var(--color-newbat-surface);
+  --color-project-muted: var(--color-newbat-muted);
+  --color-project-surface: var(--color-newbat-surface);
+  --color-project-line: var(--color-newbat-line);
+  --color-project-brand: var(--color-newbat-blue);
+  --color-project-markBg: transparent;
+  --color-project-markText: var(--color-newbat-blue);
+  --project-mark-px: 0;
+  --project-title-case: none;
+  --color-project-chipBg: var(--color-newbat-ink);
+  --color-project-chipText: var(--color-white);
+  --color-project-chipDot: var(--color-newbat-orange);
+  --color-project-heroDisc: var(--color-newbat-orange);
+  --color-project-ctaBg: var(--color-newbat-blue);
+  --color-project-ctaText: var(--color-white);
+  --color-project-bezel: #0B0D12;
+  --font-current: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-heading: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+}

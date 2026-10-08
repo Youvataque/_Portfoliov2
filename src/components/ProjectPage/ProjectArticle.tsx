@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-import { MarkedTitle, Project, ProjectSection } from "@/data/projects";
+import { MarkedTitle, Project, ProjectSection, getProject } from "@/data/projects";
 import BackButton from "./BackButton";
 import GalleryScroller from "./GalleryScroller";
+import SuccessorCard from "./SuccessorCard";
 import HomeflixStack from "./diagrams/HomeflixStack";
 
 /////////////////////////////////////////////////////////////////
@@ -43,7 +44,7 @@ function RichText({ text }: { text: string }) {
 // titre avec surlignage couleur d'accent
 function Title({ title, as: Tag = "h2", className }: { title: MarkedTitle; as?: "h1" | "h2"; className?: string }) {
     return (
-        <Tag className={`font-heading font-extrabold [text-transform:var(--project-title-case,uppercase)] leading-[1.12] tracking-tight text-project-ink [text-wrap:balance] ${className ?? ""}`}>
+        <Tag className={`font-heading [font-weight:var(--project-title-weight,800)] [text-transform:var(--project-title-case,uppercase)] leading-[1.12] tracking-tight text-project-ink [text-wrap:balance] ${className ?? ""}`}>
             {title.before}
             <mark className="rounded-[0.12em] bg-project-markBg [background-image:var(--project-mark-image,none)] px-[var(--project-mark-px,0.14em)] text-project-markText [box-decoration-break:clone]">{title.mark}</mark>
             {title.after}
@@ -159,7 +160,7 @@ function Section({ section, index }: { section: ProjectSection; index: number })
 function Gallery({ project }: { project: Project }) {
     return (
         <section className="border-t border-project-line py-24 max-md:py-16">
-            <h2 className="mb-10 text-center font-heading text-3xl max-md:text-2xl font-extrabold [text-transform:var(--project-title-case,uppercase)] tracking-tight text-project-ink">
+            <h2 className="mb-10 text-center font-heading text-3xl max-md:text-2xl [font-weight:var(--project-title-weight,800)] [text-transform:var(--project-title-case,uppercase)] tracking-tight text-project-ink">
                 {(project.galleryTitle ?? { before: "L'app en ", mark: "images" }).before}
                 <mark className="rounded-[0.12em] bg-project-markBg [background-image:var(--project-mark-image,none)] px-[var(--project-mark-px,0.14em)] text-project-markText">{(project.galleryTitle ?? { mark: "images" }).mark}</mark>
             </h2>
@@ -171,12 +172,16 @@ function Gallery({ project }: { project: Project }) {
 /////////////////////////////////////////////////////////////////
 // page projet complète, aux couleurs du projet
 const ProjectArticle: React.FC<{ project: Project }> = ({ project }) => {
+    const successor = project.successor ? getProject(project.successor.slug) : undefined;
     return (
         <article className="mx-auto w-full max-w-6xl px-6 max-md:px-4">
             <div className="pt-28 max-md:pt-24">
                 <BackButton />
             </div>
             <Hero project={project} />
+            {successor && project.successor && (
+                <SuccessorCard successor={successor} title={project.successor.title} text={project.successor.text} />
+            )}
             {project.sections.map((section, i) => (
                 <Section key={section.kicker} section={section} index={i} />
             ))}
