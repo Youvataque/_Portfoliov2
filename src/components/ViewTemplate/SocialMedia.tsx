@@ -23,7 +23,7 @@ const SocialMedia: React.FC = () => {
                     href={link}
                     target="_blank"
                     aria-label={label}
-                    className="group flex items-center gap-2.5 rounded-2xl px-5 py-2.5 max-md:px-4 max-md:py-2 bg-elementColor/60 backdrop-blur-lg shadow-sm shadow-primary/10 hover:shadow-lg hover:shadow-primary/20 transition-shadow duration-300"
+                    className="group flex items-center gap-2.5 rounded-2xl px-5 py-2.5 max-md:px-4 max-md:py-2 bg-elementColor/60 backdrop-blur-lg shadow-lg shadow-primary/15 hover:shadow-2xl hover:shadow-primary/30 transition-shadow duration-300"
                 >
                     {lucide ? (
                         <FileText className="w-[18px] h-[18px] text-primary" />

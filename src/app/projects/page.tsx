@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import BodyTemplate from "@/components/FondamentalAppComp/BodyTemplate";
 import Footer from "@/components/FondamentalAppComp/Footer";
 import ProjectsBrowser from "@/components/ViewTemplate/ProjectsBrowser";
@@ -9,7 +10,7 @@ export default function Projects() {
         <BodyTemplate>
             <div className="flex w-full max-w-6xl flex-col px-6 max-md:px-4">
                 <header className="flex flex-col items-start gap-6 pt-40 pb-10 max-md:pt-32 max-md:pb-8">
-                    <span className="rounded-full bg-elementColor/60 px-4 py-1.5 text-sm font-medium text-primary shadow-sm shadow-primary/10 backdrop-blur-xl">
+                    <span className="rounded-full bg-elementColor/60 px-4 py-1.5 text-sm font-medium text-primary shadow-lg shadow-primary/15 backdrop-blur-xl">
                         Mes projets
                     </span>
                     <h1 className="text-6xl max-xl:text-5xl max-md:text-4xl font-bold tracking-tight text-primary">
@@ -20,7 +21,10 @@ export default function Projects() {
                     </p>
                 </header>
 
-                <ProjectsBrowser />
+                {/* le filtre lit l'URL côté client */}
+                <Suspense>
+                    <ProjectsBrowser />
+                </Suspense>
 
                 <Footer />
             </div>

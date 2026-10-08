@@ -30,7 +30,7 @@ export default function Home() {
     return <section className="flex min-h-screen flex-col justify-center gap-16 max-md:gap-12 pt-28 pb-16">
       <div className="flex items-center justify-between gap-12 max-md:flex-col-reverse max-md:items-start max-md:gap-8">
         <div className="flex flex-1 flex-col items-start">
-          <motion.span {...fadeUp(0)} className="bg-elementColor/60 backdrop-blur-xl shadow-sm shadow-primary/10 rounded-full px-4 py-1.5 text-sm font-medium text-primary">
+          <motion.span {...fadeUp(0)} className="bg-elementColor/60 backdrop-blur-xl shadow-lg shadow-primary/15 rounded-full px-4 py-1.5 text-sm font-medium text-primary">
             Bienvenue ! Je suis —
           </motion.span>
           <motion.h1 {...fadeUp(0.1)} className="mt-6 whitespace-nowrap text-6xl max-xl:text-5xl max-lg:text-4xl font-bold tracking-tight text-primary">
@@ -47,7 +47,7 @@ export default function Home() {
           Voir mes projets
           <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
         </Link>
-        <Link href="/about" className="bg-elementColor/60 backdrop-blur-lg shadow-sm shadow-primary/10 hover:shadow-lg hover:shadow-primary/20 transition-shadow duration-300 rounded-2xl px-6 py-3 text-sm font-medium text-primary">
+        <Link href="/about" className="bg-elementColor/60 backdrop-blur-lg shadow-lg shadow-primary/15 hover:shadow-2xl hover:shadow-primary/30 transition-shadow duration-300 rounded-2xl px-6 py-3 text-sm font-medium text-primary">
           Me contacter
         </Link>
         <SocialMedia />

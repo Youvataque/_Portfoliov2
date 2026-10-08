@@ -16,7 +16,7 @@ const OtherProjectsBanner: React.FC = () => {
     return (
         <Link
             href="/projects"
-            className="group mt-6 flex items-center justify-between gap-6 rounded-3xl bg-elementColor/50 px-8 py-7 max-md:px-5 max-md:py-5 shadow-sm shadow-primary/10 backdrop-blur-lg transition-shadow duration-300 hover:shadow-xl hover:shadow-primary/15"
+            className="group mt-6 flex items-center justify-between gap-6 rounded-3xl bg-elementColor/50 px-8 py-7 max-md:px-5 max-md:py-5 shadow-lg shadow-primary/15 backdrop-blur-lg transition-shadow duration-300 hover:shadow-2xl hover:shadow-primary/30"
         >
             <div className="flex flex-col gap-1">
                 <span className="text-2xl max-md:text-xl font-bold tracking-tight text-primary">Voir mes autres projets</span>

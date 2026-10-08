@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { ProjectCategory, projectCategories, projects } from "@/data/projects";
 import ProjectTile from "./ProjectTile";
@@ -9,8 +9,14 @@ import PerspectiveReveal from "./PerspectiveReveal";
 
 /////////////////////////////////////////////////////////////////
 // liste des projets par catégorie, avec un filtre pour n'en afficher qu'une
+// le filtre vit dans l'URL (?filter=mobile) pour que la navbar puisse ouvrir la page préfiltrée
 const ProjectsBrowser: React.FC = () => {
-    const [filter, setFilter] = useState<ProjectCategory | "all">("all");
+    const router = useRouter();
+    const pathname = usePathname();
+    const param = useSearchParams().get("filter");
+    const filter: ProjectCategory | "all" = projectCategories.some(({ id }) => id === param) ? (param as ProjectCategory) : "all";
+    const setFilter = (id: ProjectCategory | "all") =>
+        router.replace(id === "all" ? pathname : `${pathname}?filter=${id}`, { scroll: false });
 
     // seules les catégories qui contiennent au moins un projet
     const categories = projectCategories.filter(({ id }) => projects.some((p) => p.category === id));
@@ -28,7 +34,7 @@ const ProjectsBrowser: React.FC = () => {
                         onClick={() => setFilter(id)}
                         aria-pressed={filter === id}
                         className={cn(
-                            "rounded-full px-5 py-2 text-sm font-medium shadow-sm shadow-primary/10 backdrop-blur-lg transition-colors duration-200",
+                            "rounded-full px-5 py-2 text-sm font-medium shadow-lg shadow-primary/15 backdrop-blur-lg transition-colors duration-200",
                             filter === id ? "bg-primary text-background" : "bg-elementColor/60 text-primary hover:bg-foreground/10"
                         )}
                     >

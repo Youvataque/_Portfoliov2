@@ -28,7 +28,7 @@ const techs = [
 // corp du code : panneau en verre, icône blanche dans un rond bleu foncé + nom + rôle
 export function TechStack() {
   return (
-    <div className="grid grid-cols-4 max-md:grid-cols-2 gap-x-6 gap-y-8 rounded-3xl bg-elementColor/50 p-8 max-md:p-5 shadow-sm shadow-primary/10 backdrop-blur-lg">
+    <div className="grid grid-cols-4 max-md:grid-cols-2 gap-x-6 gap-y-8 rounded-3xl bg-elementColor/50 p-8 max-md:p-5 shadow-lg shadow-primary/15 backdrop-blur-lg">
       {techs.map(({ name, role, icon: Icon }) => (
         <div key={name} className="flex items-center gap-3">
           <div className="flex h-12 w-12 max-md:h-10 max-md:w-10 shrink-0 items-center justify-center rounded-full bg-primary">

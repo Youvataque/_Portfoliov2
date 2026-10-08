@@ -25,7 +25,7 @@ export interface ProjectSection {
 export type ProjectCategory = "principal" | "mobile" | "web";
 
 export const projectCategories: { id: ProjectCategory; title: string }[] = [
-    { id: "principal", title: "Projets principaux" },
+    { id: "principal", title: "Favoris" },
     { id: "mobile", title: "Mobile" },
     { id: "web", title: "Web" },
 ];

@@ -9,7 +9,7 @@ const ProjectTile: React.FC<{ project: Project }> = ({ project }) => {
     return (
         <Link
             href={`/projects/${project.slug}`}
-            className="group grid grid-cols-[1.25fr_1fr] max-lg:grid-cols-1 gap-8 max-md:gap-6 rounded-3xl bg-elementColor/50 p-4 max-md:p-3 shadow-sm shadow-primary/10 backdrop-blur-lg transition-shadow duration-300 hover:shadow-xl hover:shadow-primary/15"
+            className="group grid grid-cols-[1.25fr_1fr] max-lg:grid-cols-1 gap-8 max-md:gap-6 rounded-3xl bg-elementColor/50 p-4 max-md:p-3 shadow-lg shadow-primary/15 backdrop-blur-lg transition-shadow duration-300 hover:shadow-2xl hover:shadow-primary/30"
         >
             {/* visuel 00 */}
             <div className="relative aspect-video overflow-hidden rounded-2xl">

@@ -91,7 +91,8 @@
 /* glassmorphism clair : verre blanc translucide sur halos bleus */
 @utility glass {
   background-color: color-mix(in oklab, var(--color-elementColor) 55%, transparent);
-  box-shadow: 0 8px 32px -8px color-mix(in oklab, var(--color-primary) 12%, transparent);
+  /* même ombre que les cartes du site (shadow-lg shadow-primary/15) */
+  @apply shadow-lg shadow-primary/15;
   /* utilitaires Tailwind : les déclarations brutes étaient fusionnées en -webkit- seul (ignoré par Chrome) */
   @apply backdrop-blur-lg backdrop-saturate-150;
 }
@@ -102,7 +103,7 @@
 
   &:hover {
     background-color: color-mix(in oklab, var(--color-elementColor) 75%, transparent);
-    box-shadow: 0 12px 40px -8px color-mix(in oklab, var(--color-secondary) 25%, transparent);
+    @apply shadow-2xl shadow-primary/30;
   }
 }
 
