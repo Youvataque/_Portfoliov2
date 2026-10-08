@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   metadataBase: new URL("https://seguin-dev.com"),
   title: "Seguin - Website",
-  description: "Un site internet ? Une application mobile ? Ou bien un projet encore plus fou ? Dans tout les cas je suis la solution !",
+  description: "Yannis Seguin, Product Engineer. Je conçois, code et déploie des applications web et mobiles en Flutter et Laravel, de l'app au back. CTO de Neeko, fondateur de Clane.",
   // image de partage générée aux couleurs du site (photo, intro, technos)
   openGraph: {
     title: "Yannis Seguin · Product Engineer",

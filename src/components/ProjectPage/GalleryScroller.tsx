@@ -6,7 +6,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 /////////////////////////////////////////////////////////////////
-// bouton précédent / suivant en verre flouté, aux couleurs du projet
+// bouton précédent / suivant, aux couleurs du projet
 function NavButton({ side, visible, onClick }: { side: "left" | "right"; visible: boolean; onClick: () => void }) {
     const Icon = side === "left" ? ChevronLeft : ChevronRight;
     return (
@@ -17,13 +17,14 @@ function NavButton({ side, visible, onClick }: { side: "left" | "right"; visible
             tabIndex={visible ? 0 : -1}
             className={cn(
                 "absolute top-1/2 z-10 grid h-12 w-12 -translate-y-1/2 place-items-center rounded-full",
-                "bg-project-bg/50 text-project-ink shadow-lg shadow-black/15 backdrop-blur-md",
-                "transition-[opacity,box-shadow] duration-300 hover:shadow-xl hover:shadow-black/25",
+                "border border-project-ink/10 bg-project-bg/90 text-project-ink shadow-lg shadow-black/20",
+                // seules l'opacité et l'échelle s'animent, pour un survol fluide
+                "transition-[opacity,scale] duration-200 ease-out will-change-[scale] hover:scale-108 active:scale-95",
                 side === "left" ? "left-2 max-md:left-0" : "right-2 max-md:right-0",
                 visible ? "opacity-100" : "pointer-events-none opacity-0"
             )}
         >
-            <Icon className="h-6 w-6" />
+            <Icon className="h-6 w-6" strokeWidth={2.25} />
         </button>
     );
 }

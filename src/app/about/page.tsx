@@ -60,7 +60,7 @@ const About: React.FC = () => {
           Yannis Seguin
         </h1>
         <MainText
-          text={"Passé par le freelance et aujourd'hui CTO, je connais les contraintes du réel. Je déploie des stacks complètes (Front, Back, DevOps) avec une obsession : éviter la dette technique et garantir la scalabilité.\n\nUne technologie doit être invisible et efficace. J'utilise l'IA et l'automatisation pour coder intelligemment, ce qui me permet de livrer des architectures robustes en des temps records. Pas de sur-ingénierie, juste du résultat."}
+          text={"Passé par le freelance, je suis aujourd'hui CTO de Neeko. J'y ai repris un MVP fragile pour en faire une plateforme temps réel en production. À côté, je développe Clane, un SaaS pour les entreprises de clim et de chauffage, utilisable hors connexion.\n\nJe travaille sur toute la chaîne, de l'app Flutter au back Laravel, jusqu'au déploiement avec Docker et GitHub Actions. J'utilise l'IA au quotidien comme outil de travail, et tout ce qui part en production est relu et compris."}
           style="mt-6 pt-0 max-w-xl text-lg max-xl:text-base leading-relaxed text-foreground"
         />
       </div>

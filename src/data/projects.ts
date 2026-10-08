@@ -84,7 +84,7 @@ export const projects: Project[] = [
         stack: ["Flutter", "Laravel", "Next.js", "React", "Redis GEO", "H3", "WebSocket", "Stripe", "Docker", "GitHub Actions"],
         hero: {
             title: { before: "Des extras en ", mark: "moins de 2 heures" },
-            lead: "La plateforme temps réel qui connecte restaurateurs et extras. Conçue, codée et déployée en solo, de l'app au back.",
+            lead: "La plateforme temps réel qui connecte restaurateurs et extras. J'ai repris son MVP et l'ai redressé en production, seul, de l'app au back.",
             screen: "/Img/Neeko/screen-missions.webp",
             illustration: "/Img/Neeko/chef.svg",
         },
@@ -361,11 +361,11 @@ export const projects: Project[] = [
         urlLabel: "Voir le film de lancement",
         cover: "/Img/NewBat/00_cover.jpg",
         summary:
-            "La première version de Clane. Une suite de trois apps pour les artisans du bâtiment, avec son site de lancement. Il fallait digitaliser des métiers encore très papier sans perdre les artisans en route. Projet aujourd'hui arrêté, il continue dans Clane.",
+            "L'étape entre le premier outil Swift et le Clane d'aujourd'hui. Une suite de trois apps pour les artisans du bâtiment, avec son site de lancement. Il fallait digitaliser des métiers encore très papier sans perdre les artisans en route. Projet aujourd'hui arrêté, il continue dans Clane.",
         stack: ["Flutter", "Firebase", "React", "Vite", "Tailwind", "Figma"],
         hero: {
             title: { before: "L'informatique ", mark: "du bâtiment" },
-            lead: "Une suite de trois apps pour les artisans, Intervention, Chantier et Devis, et son site de lancement. La première version de ce qui est devenu Clane.",
+            lead: "Une suite de trois apps pour les artisans, Intervention, Chantier et Devis, et son site de lancement. L'étape entre le premier outil Swift et ce qui est devenu Clane.",
             screen: "/Img/NewBat/screen-home.webp",
         },
         successor: {
