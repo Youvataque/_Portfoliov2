@@ -168,7 +168,7 @@ export const projects: Project[] = [
                 kicker: "Le hors connexion",
                 body: [
                     "Chaque saisie est d'abord écrite dans une base SQLite locale, puis rejouée vers le serveur en une seule transaction. Les identifiants sont générés sur l'appareil, ce qui rend le lot rejouable sans doublon, et le serveur fixe lui-même l'entreprise, l'auteur et les dates sans jamais faire confiance au téléphone.",
-                    "Quand un lot est refusé, le serveur ne s'arrête pas à la première erreur. Il liste toutes les lignes fautives, celles qu'elles bloquent et l'endroit où la chaîne de références casse, puis l'app propose au technicien de corriger chaque champ. Côté données, des clés étrangères composites isolent chaque entreprise, si bien qu'une requête oubliée ne peut rien faire fuiter.",
+                    "Quand un lot est refusé, le serveur ne s'arrête pas à la première erreur. Non, il liste toutes les lignes fautives, celles qui bloquent et l'endroit où la chaîne de références casse, puis l'app propose au technicien de corriger chaque champ. Côté données, des clés étrangères composites isolent chaque entreprise, si bien qu'une requête oubliée ne peut rien faire fuiter.",
                 ],
                 image: { src: "/Img/Clane/03_offline.jpg", alt: "La synchronisation hors connexion de Clane" },
             },
