@@ -134,7 +134,7 @@ export const projects: Project[] = [
         logo: "/Img/Clane/logo.svg",
         theme: "theme-clane",
         role: "Fondateur et développeur",
-        period: "Depuis 2023",
+        period: "Depuis 2026",
         url: "https://www.clane.fr/",
         cover: "/Img/Clane/00_cover.jpg",
         summary:
@@ -190,7 +190,7 @@ export const projects: Project[] = [
         logo: "/Img/HomeFlix/logo.webp",
         theme: "theme-homeflix",
         role: "Projet open source",
-        period: "Arrêté en 2026",
+        period: "De 2024 à 2026",
         url: "https://github.com/Youvataque/HomeFlix-discontinued",
         urlLabel: "Voir le code sur GitHub",
         cover: "/Img/HomeFlix/00_cover.jpg",
